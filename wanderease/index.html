@@ -480,6 +480,90 @@
     text-align: center;
     clear: both;
 }
+.activities-container {
+    padding: 40px;
+    background-color: #f7f7f7;
+}
+
+.activities-tabs {
+    margin-bottom: 30px;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.tab-pane h3 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .tab-pane .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
     </style>
     <link rel="stylesheet" href="styles.css">
     
@@ -517,7 +601,7 @@
                         <a class="nav-link" href="#package">Packages</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#">Activities</a>
+                        <a class="nav-link" href="#package">Activities</a>
                     </li>
                     <li class="nav-item me-5">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -575,37 +659,36 @@
                 </div>
               </div>
           </div>
-        <ul class="nav sticky-top nav-pills mb-3" id="pills-tab" role="tablist">
+          <ul class="nav sticky-top nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item " role="presentation">
-              <button class="nav-link active" id="pills-explore-tab" data-bs-toggle="pill" data-bs-target="#pills-explore" type="button" role="tab" aria-controls="pills-explore" aria-selected="true">Explore</button>
+                <button class="nav-link active" id="pills-explore-tab" data-bs-toggle="pill" data-bs-target="#pills-explore" type="button" role="tab" aria-controls="pills-explore" aria-selected="true">Explore Activities</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-Azerbaijan-tab" data-bs-toggle="pill" data-bs-target="#pills-Azerbaijan" type="button" role="tab" aria-controls="pills-Azerbaijan" aria-selected="false">Azerbaijan</button>
+                <button class="nav-link" id="pills-Azerbaijan-tab" data-bs-toggle="pill" data-bs-target="#pills-Azerbaijan-activities" type="button" role="tab" aria-controls="pills-Azerbaijan-activities" aria-selected="false">Azerbaijan</button>
             </li>
             <li class="nav-item " role="presentation">
-              <button class="nav-link" id="pills-Bali-tab" data-bs-toggle="pill" data-bs-target="#pills-Bali" type="button" role="tab" aria-controls="pills-Bali" aria-selected="false">Bali</button>
+                <button class="nav-link" id="pills-Bali-tab" data-bs-toggle="pill" data-bs-target="#pills-Bali-activities" type="button" role="tab" aria-controls="pills-Bali-activities" aria-selected="false">Bali</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-Dubai-tab" data-bs-toggle="pill" data-bs-target="#pills-Dubai" type="button" role="tab" aria-controls="pills-Dubai" aria-selected="false">Dubai</button>
+                <button class="nav-link" id="pills-Dubai-tab" data-bs-toggle="pill" data-bs-target="#pills-Dubai-activities" type="button" role="tab" aria-controls="pills-Dubai-activities" aria-selected="false">Dubai</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-Malaysia-tab" data-bs-toggle="pill" data-bs-target="#pills-Malaysia" type="button" role="tab" aria-controls="pills-Malaysia" aria-selected="false">Malaysia</button>
+                <button class="nav-link" id="pills-Malaysia-tab" data-bs-toggle="pill" data-bs-target="#pills-Malaysia-activities" type="button" role="tab" aria-controls="pills-Malaysia-activities" aria-selected="false">Malaysia</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-Singapore-tab" data-bs-toggle="pill" data-bs-target="#pills-Singapore" type="button" role="tab" aria-controls="pills-Singapore" aria-selected="false">Singapore</button>
+                <button class="nav-link" id="pills-Singapore-tab" data-bs-toggle="pill" data-bs-target="#pills-Singapore-activities" type="button" role="tab" aria-controls="pills-Singapore-activities" aria-selected="false">Singapore</button>
             </li>
-            <li class="nav-item" role="presentation"></li>
-                <button class="nav-link" id="pills-Srilanka-tab" data-bs-toggle="pill" data-bs-target="#pills-Srilanka" type="button" role="tab" aria-controls="pills-Srilanka" aria-selected="false">Srilanka</button>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-Srilanka-tab" data-bs-toggle="pill" data-bs-target="#pills-Srilanka-activities" type="button" role="tab" aria-controls="pills-Srilanka-activities" aria-selected="false">Srilanka</button>
             </li>
-            <li class="nav-item" role="presentation"></li>
-                <button class="nav-link" id="pills-Thailand-tab" data-bs-toggle="pill" data-bs-target="#pills-Thailand" type="button" role="tab" aria-controls="pills-Thailand" aria-selected="false">Thailand</button>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-Thailand-tab" data-bs-toggle="pill" data-bs-target="#pills-Thailand-activities" type="button" role="tab" aria-controls="pills-Thailand-activities" aria-selected="false">Thailand</button>
             </li>
-            <li class="nav-item" role="presentation"></li>
-                <button class="nav-link" id="pills-Vietnam-tab" data-bs-toggle="pill" data-bs-target="#pills-Vietnam" type="button" role="tab" aria-controls="pills-Vietnam" aria-selected="false">Vietnam</button>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-Vietnam-tab" data-bs-toggle="pill" data-bs-target="#pills-Vietnam-activities" type="button" role="tab" aria-controls="pills-Vietnam-activities" aria-selected="false">Vietnam</button>
             </li>
-            
-              
         </ul>
+        
         
     
             </div>
@@ -871,36 +954,11 @@
             <div class="tab-pane fade" id="pills-Vietnam" role="tabpanel" aria-labelledby="pills-Vietnam-tab" tabindex="0">Vietnam content here</div>
         </div>
         <div class="activities-container">
-            <h2>Activities</h2>
+           
             <div class="activities-tabs">
-                <ul class="nav nav-pills mb-3" id="activities-tabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="bali-activities-tab" data-bs-toggle="pill" data-bs-target="#bali-activities" type="button" role="tab" aria-controls="bali-activities" aria-selected="true">Bali</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="thailand-activities-tab" data-bs-toggle="pill" data-bs-target="#thailand-activities" type="button" role="tab" aria-controls="thailand-activities" aria-selected="false">Thailand</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="vietnam-activities-tab" data-bs-toggle="pill" data-bs-target="#vietnam-activities" type="button" role="tab" aria-controls="vietnam-activities" aria-selected="false">Vietnam</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="azerbaijan-activities-tab" data-bs-toggle="pill" data-bs-target="#azerbaijan-activities" type="button" role="tab" aria-controls="azerbaijan-activities" aria-selected="false">Azerbaijan</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="dubai-activities-tab" data-bs-toggle="pill" data-bs-target="#dubai-activities" type="button" role="tab" aria-controls="dubai-activities" aria-selected="false">Dubai</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="malaysia-activities-tab" data-bs-toggle="pill" data-bs-target="#malaysia-activities" type="button" role="tab" aria-controls="malaysia-activities" aria-selected="false">Malaysia</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="srilanka-activities-tab" data-bs-toggle="pill" data-bs-target="#srilanka-activities" type="button" role="tab" aria-controls="srilanka-activities" aria-selected="false">Sri Lanka</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="singapore-activities-tab" data-bs-toggle="pill" data-bs-target="#singapore-activities" type="button" role="tab" aria-controls="singapore-activities" aria-selected="false">Singapore</button>
-                    </li>
-                </ul>
+                
                 <div class="tab-content" id="activities-tabContent">
-                    <div class="tab-pane fade show active" id="bali-activities" role="tabpanel" aria-labelledby="bali-activities-tab" tabindex="0">
+                    <div class="tab-pane fade" id="pills-Bali-activities" role="tabpanel" aria-labelledby="pills-Bali-tab" tabindex="0">
                         <h3>Bali Activities</h3>
                         <div class="row">
                             <div class="col-md-4">
@@ -939,7 +997,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="thailand-activities" role="tabpanel" aria-labelledby="thailand-activities-tab" tabindex="0">
+                    <div class="tab-pane fade" id="pills-Thailand-activities" role="tabpanel" aria-labelledby="pills-Thailand-tab" tabindex="0">
                         <h3>Thailand Activities</h3>
                         <div class="row">
                             <div class="col-md-4">
@@ -966,7 +1024,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="vietnam-activities" role="tabpanel" aria-labelledby="vietnam-activities-tab" tabindex="0">
+                    <div class="tab-pane fade" id="pills-Vietnam-activities" role="tabpanel" aria-labelledby="pills-Vietnam-tab" tabindex="0">
                         <h3>Vietnam Activities</h3>
                         <div class="row">
                             <div class="col-md-4">
@@ -993,7 +1051,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="azerbaijan-activities" role="tabpanel" aria-labelledby="azerbaijan-activities-tab" tabindex="0">
+                    <div class="tab-pane fade" id="pills-Azerbaijan-activities" role="tabpanel" aria-labelledby="pills-Azerbaijan-tab" tabindex="0">
                         <h3>Azerbaijan Activities</h3>
                         <div class="row">
                             <div class="col-md-4">
@@ -1009,7 +1067,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="dubai-activities" role="tabpanel" aria-labelledby="dubai-activities-tab" tabindex="0">
+                    <div class="tab-pane fade" id="pills-Dubai-activities" role="tabpanel" aria-labelledby="pills-Dubai-tab" tabindex="0">
                         <h3>Dubai Activities</h3>
                         <div class="row">
                             <div class="col-md-4">
@@ -1025,7 +1083,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="malaysia-activities" role="tabpanel" aria-labelledby="malaysia-activities-tab" tabindex="0">
+                    <div class="tab-pane fade" id="pills-Malaysia-activities" role="tabpanel" aria-labelledby="pills-Malaysia-tab" tabindex="0">
                         <h3>Malaysia Activities</h3>
                         <div class="row">
                             <div class="col-md-4">
@@ -1041,7 +1099,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="srilanka-activities" role="tabpanel" aria-labelledby="srilanka-activities-tab" tabindex="0">
+                    <div class="tab-pane fade" id="pills-Srilanka-activities" role="tabpanel" aria-labelledby="pills-Srilanka-tab" tabindex="0">
                         <h3>Sri Lanka Activities</h3>
                         <div class="row">
                             <div class="col-md-4">
@@ -1057,7 +1115,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="singapore-activities" role="tabpanel" aria-labelledby="singapore-activities-tab" tabindex="0">
+                    <div class="tab-pane fade" id="pills-Singapore-activities" role="tabpanel" aria-labelledby="pills-Singapore-tab" tabindex="0">
                         <h3>Singapore Activities</h3>
                         <div class="row">
                             <div class="col-md-4">
