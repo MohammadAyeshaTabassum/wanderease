@@ -243,47 +243,62 @@
         }
 
         .welcome-section video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        /* Style the about section */
-        .about-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px !important; /* Set the height to 300px and override other rules */
+    object-fit: contain;
+}
+     /* Style the about section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .text-center {
-        text-align: center;
-        }
+.text-center {
+    text-align: center;
+}
 
-        .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        }
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    width: 100%; /* Ensure full width for the container */
+    max-width: 1200px; /* Optional: Set a max width for better layout */
+    margin: 0 auto; /* Center the container */
+}
 
-.left-boxes, .right-boxes {
-  display: flex;
-  flex-direction: column;
+.left-boxes {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 82px; /* Move left boxes further to the left */
+}
+
+.right-boxes {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .box {
-  width: 70%;
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make boxes take up full width of their container */
+    margin: 10px 0; /* Adjust margin for vertical spacing */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .image-center {
-  margin: 20px;
+    margin: 20px 0; /* Add vertical margins to prevent overlap */
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image is treated as a block element */
 }
+
 .testimonial-section {
     padding: 50px 0;
     background-color: #f7f7f7;
@@ -563,6 +578,59 @@
         margin-bottom: 20px;
     }
 }
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Popup container centered */
+.popup {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    background-color: transparent; /* No background blur or darkening */
+}
+
+/* Popup content */
+.popup-content {
+    position: relative;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+/* Popup image */
+.popup-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
 
     </style>
     <link rel="stylesheet" href="styles.css">
@@ -572,7 +640,22 @@
 </head>
 
 <body>
-    
+  <!-- Transparent Background Overlay -->
+<div id="overlay" class="overlay"></div>
+
+<!-- Popup container -->
+<div id="popup" class="popup">
+    <div id="popupContent" class="popup-content">
+        <!-- Close button -->
+        <span class="close-btn">&times;</span>
+        <!-- Popup image -->
+        <img src="images/posternew.jpg" alt="Popup Image" class="popup-image" id="popupImage">
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -616,16 +699,16 @@
     
     </div>
     <div>
-    <div class="tabs-center ">
+        <div class="tabs-center ">
 
 
-        <div class="welcome-section"></div>
-            <video poster="images/bg_1.jpg" loop autoplay muted playsinline="true">
-                <source src="images/wanderease.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        </div>
+            <div class="welcome-section"></div>
+                <video poster="images/bg_1.jpg" loop autoplay muted playsinline="true" controls>
+                    <source src="images/wanderease.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            </div>
         <div class="about-section" id="about">
             <div class="text-center">
               <h6 style="margin-top: 30px;">GET TO KNOW US</h6>
@@ -637,11 +720,10 @@
                 <div style="margin-left: 60px;" class="left-boxes">
                   <div class="box">
                     <h5 style="color: #db7202;">Luxury Trip</h5>
-                    <p>Escape to unparalleled luxury with exclusive experiences in the world's most breathtaking destinations, </p>
-                  </div>
+                    <p>Indulge in unparalleled luxury with exclusive experiences in the world’s most stunning destinations.</p>                  </div>
                   <div class="box">
                     <h5 style="color: #db7202;" >Affordable Budget</h5>
-                    <p>Your safety is a priority. We ensure strict security for your information.</p>
+                    <p>Quality service at a price you can afford. Get the best value without overspending.</p>
                   </div>
                 </div>
                 <div style="margin-left: -80px;" class="image-center">
@@ -650,11 +732,11 @@
                 <div class="right-boxes">
                   <div class="box">
                     <h5 style="color: #db7202;" >Personalized approach</h5>
-                    <p>Effortlessly navigate and find your perfect match with our user-friendly interface.</p>
+                    <p>Effortlessly find your perfect match with our customized recommendations.</p>
                   </div>
                   <div class="box">
                     <h5 style="color: #db7202;" >Experienced Guide</h5>
-                    <p>Our team is available 24/7 to assist you with any queries or concern.</p>
+                    <p>Our team is available around the clock to provide you with unparalleled support and resolve any inquiries or concerns.</p>
                   </div>
                 </div>
               </div>

@@ -266,10 +266,66 @@
       font-weight: 700;
       font-size: 12px;
     }
+    .arrow-mark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background-color: #2a5da5;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  transition: top 0.3s ease;
+}
+
+
+
+.arrow-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+.arrow-mark::before {
+  content: "\2190"; /* Unicode character for left arrow */
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
   </style>
 </head>
 <body>
-  
+  <!-- Add a div element to hold the arrow mark -->
+<div class="arrow-mark"><a href="index.html" class="arrow-link"></a></div>
+<script>
+ // Get the arrow mark element
+const arrowMark = document.querySelector('.arrow-mark');
+
+// Add an event listener to the arrow mark click event
+arrowMark.addEventListener('click', () => {
+  // Scroll to the top of the previous page
+  history.back();
+});
+
+// Add an event listener to the window scroll event
+window.addEventListener('scroll', () => {
+  // Check if the user has scrolled down
+  if (window.scrollY > 0) {
+    // Move the arrow mark down
+    arrowMark.style.top = '20px';
+  } else {
+    // Move the arrow mark back to the top
+    arrowMark.style.top = '0';
+  }
+});
+
+</script>
   <header>
     <img src="wanderease.png" alt="Logo">
     <input type="text" placeholder="Search...">
