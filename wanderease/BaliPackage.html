@@ -10,19 +10,21 @@
       background-color: white;
       margin: 0;
       padding: 0;
-      width: 1000px;
+      width: 1060px;
      margin-left: 200px;
     }
 
     header {
-      display: flex;
-      align-items: center;
-      background-color: #fff;
-      padding: 10px 20px;
-    }
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc; /* add a border-bottom property */
+}
 
     header img {
-      width: 50px;
+      width: 60px;
+      height: 50px;
       margin-right: 20px;
     }
 
@@ -73,7 +75,7 @@
     .small-images .view-all img {
       opacity: 0.8;
     }
-
+   
     .small-images .view-all .overlay {
       position: absolute;
       top: 0;
@@ -102,6 +104,13 @@
       align-items: center;
       z-index: 1000;
     }
+    .all-images-popup img {
+  width: 25%; /* set the image width to 25% of the popup width */
+  height: 500px; /* set the image height to 200px */
+  object-fit: cover; /* scale the image to cover the container */
+  margin: 10px; /* add some margin between the images */
+  border-radius: 10px; /* add some border radius to the images */
+}
 
     .popup-content {
       width: 80%;
@@ -121,7 +130,7 @@
       position: absolute;
       top: 10px;
       right: 20px;
-      background-color: red;
+      background-color: rgb(92, 124, 199);
       color: white;
       padding: 10px;
       border: none;
@@ -135,7 +144,7 @@
     }
 
     .details-section .info {
-      width: 50%;
+      width: 70%;
     }
 
     .details-section .form-container {
@@ -144,6 +153,16 @@
     }
 
     /* Enquire Now as a card */
+    .form-container .form-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Default position */
+  width: 380px;
+  z-index: 10;
+}
+
     .form-card {
       background-color: white;
       padding: 20px;
@@ -162,7 +181,7 @@
     .form-container button {
       width: 100%;
       padding: 10px;
-      background-color: orange;
+      background-color: #db7202;
       color: white;
       border: none;
       border-radius: 5px;
@@ -171,16 +190,54 @@
     }
 
     .trip-highlights {
-      background-color: #e4e8d7;
+      background-color: #ffffff;
       padding: 20px;
       border-radius: 10px;
       margin: 20px;
     }
 
     .highlight-tags {
-      display: flex;
-      flex-wrap: wrap;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.highlight-tags::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.h11 {
+  background-color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.h11:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
 
     .highlight-tags div {
       background-color: lightgreen;
@@ -192,14 +249,14 @@
 
     .itinerary {
       margin-top: 20px;
-      background-color: #f5f5f5;
+      background-color: #ffffff;
       padding: 50px;
     }
 
     .itinerary select {
       width: 100%;
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #ffffff;
       border-radius: 5px;
       margin-bottom: 10px; /* Add space between dropdowns */
     }
@@ -211,45 +268,91 @@
       display: none;
     }
     .dropdown-container {
-      margin: 20px;
-    }
+  margin: 20px;
+  margin-left: -20px; /* Move the dropdowns to the left side */
+  width: 60%; /* Keep the dropdowns to half the width */
+  position: relative; /* Add this to position the dropdown symbol */
+}
+.day-tag {
+  background-color: #de8021; /* Orange color */
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #fff; /* White text color */
+}
+.dropdown-content {
+  display: none;
+  margin-top: 10px;
+  background-color: #ffffff; /* Bright background for contrast */
+  padding: 20px;
+  border: 1px solid #db7202; /* Matching border */
+  border-radius: 8px; /* Slightly larger rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  transition: all 0.2s ease; /* Smooth transition */
+}
 
-    .dropdown-content {
-      display: none;
-      margin-top: 10px;
-      background-color: white;
-      padding: 20px;
-    }
+.dropdown-content h4 {
+  margin: 10px 0;
+  font-weight: bold; /* Bold for emphasis */
+  background-color: #ffffff; /* White background */
+  padding: 12px; /* Adequate padding for comfort */
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+  color: #db7202; /* Text color */
+  text-align: left; /* Left-aligned text */
+  padding-left: 20px; /* Add padding to the left for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
 
-    .dropdown-content h4 {
-      margin: 10px 0;
-    }
 
-    .dropdown-content ul {
-      list-style-type: none;
-      padding: 0;
-    }
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-    .dropdown-content ul li {
-      margin: 5px 0;
-    }
+.dropdown-content ul li {
+  margin: 5px 0;
+  padding: 8px; /* Increased padding for better interaction */
+  border-bottom: 1px solid #e2e2e2; /* Lighter border for subtle separation */
+  transition: background-color 0.2s; /* Smooth background color change */
+}
 
-    .dropdown-button {
-      background-color: white;
-      color: black;
-      border: none;
-   
-      padding: 10px;
-      
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.9em;
-      width: 100%;
-      text-align: left;
-      
-      border:1px solid #db7202;
-      
-    }
+.dropdown-content ul li:hover {
+  background-color: #f9f9f9; /* Light hover effect for better feedback */
+}
+
+.dropdown-content ul li:last-child {
+  border-bottom: none; /* No border on the last item */
+}
+
+.dropdown-button1 {
+  background-color: #f7f7f7; /* Light background for a clean look */
+  color: #333; /* Darker text for better readability */
+  border: 1px solid #db7202; /* Matching border */
+  padding: 10px 15px; /* Added padding for comfort */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em; /* Slightly larger font size */
+  width: 100%;
+  text-align: left;
+  position: relative; /* Position for dropdown symbol */
+  transition: background-color 0.2s; /* Smooth background change */
+}
+
+.dropdown-button1:hover {
+  background-color: #eaeaea; /* Hover effect for the button */
+}
+
+.dropdown-button1::after {
+  content: "\25BC"; /* V-shaped dropdown symbol */
+  font-size: 12px; /* Symbol size */
+  position: absolute;
+  right: 15px; /* Positioned further from the right edge */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #db7202; /* Match the symbol color with the theme */
+}
+
     .end-trip {
       text-align: center;
       margin-top: 20px;
@@ -260,7 +363,7 @@
       color: black;
     }
     .highlight-tags .h11{
-      background-color: #db720213;
+      background-color: #ffffff13;
       border:1px solid #db7202;
       color: #db7202;
       font-weight: 700;
@@ -298,7 +401,176 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 200px; /* adjust the width as needed */
+}
+
+.button-container button {
+  width: 45%; /* adjust the width as needed */
+  margin: 10px;
+}
+.nav-bar {
+  position: sticky; /* Make the navigation bar sticky */
+  top: 0; /* Keep the navigation bar at the top */
+  z-index: 1; /* Ensure the navigation bar is on top of other elements */
+  background-color: #f9f5f5; /* dark gray background */
+  padding: 5px;
+  border-bottom: 1px solid  #f9f5f5; /* dark gray border */
+  width: 60%; /* Make the nav half the width of the original nav */
+  margin-left: -30px; /* Move the nav to the left */
+  margin-top: -50px; /* Add a gap between the image and the nav */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+.nav-bar .button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar .dropdown-button {
+  background-color: #fff; /* white background */
+  color: #333; /* dark gray text */
+  border: 2px solid #db7202; /* same border color as the Call Us button */
+  padding: 5px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; /* optional: to match the rounded corners */
+}
+
+
+.nav-bar .dropdown-button.active {
+  background-color: #db7202; /* blue background for active state */
+  color: #fff; /* white text for active state */
+}
+.carousel {
+  position: relative;
+  width: 1250px; /* Set the width of the carousel */
+  height: 350px; /* Set the height of the carousel */
+  margin: 40px auto;
+  margin-left: -23px;
+  
+}
+
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.carousel-item {
+  position: relative;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-image: none;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 36px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 1; /* Add this line to bring the buttons to the front */
+  
+  padding: 10px; /* Add some padding to make the buttons larger */
+}
+
+.carousel-prev {
+  left: 0; /* Change this to 0 to make the button visible */
+}
+
+.carousel-next {
+  right: 680px; /* Change this to 0 to make the button visible */
+}
+.carousel-item img {
+  background-color: transparent;
+  background-image: none;
+  width: 46%; /* Increase the width of the carousel images */
+}
+.carousel-item .image-container img {
+  background-color: transparent;
+  background-image: none;
+  margin-bottom: 10px;
+  margin-left:-50px;
+}
+.fa {
+  color: rgb(216, 121, 4); /* Match the icon color with the span background */
+  margin-right: 5px; /* Add space between icon and text */
+}
+.flatpickr-calendar {
+    position: absolute !important; /* Override default positioning */
+    left: 720px !important; /* Adjust this value to move the calendar left */
+  }
+  .activities-carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Adjust width as needed */
+  overflow: hidden; /* Hide overflow */
+}
+
+.activities-carousel-container .carousel-inner img {
+  width: 100%; /* Full width */
+  height: 300px; /* Fixed height */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.carousel-caption {
+  position: absolute; /* Position caption over the image */
+  bottom: 20px; /* Position from the bottom */
+  left: 15px; /* Position from the left */
+  color: white; /* Text color */
+  background: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+  padding: 5px 10px; /* Padding */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute; /* Position absolutely within the container */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+  border-radius: 50%; /* Round controls */
+  width: 40px; /* Set size */
+  height: 40px; /* Set size */
+  z-index: 10; /* Ensure they are above the images */
+}
+
+.carousel-control-prev {
+  left: 10px; /* Position to the left */
+}
+
+.carousel-control-next {
+  right: 10px; /* Position to the right */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: white; /* Icon color */
+  border-radius: 50%; /* Round icons */
+  width: 20px; /* Adjust icon size */
+  height: 20px; /* Adjust icon size */
+}
+
   </style>
+  <!-- Include flatpickr CSS and JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
   <!-- Add a div element to hold the arrow mark -->
@@ -328,7 +600,7 @@ window.addEventListener('scroll', () => {
 </script>
   <header>
     <img src="wanderease.png" alt="Logo">
-    <input type="text" placeholder="Search...">
+    
   </header>
 
   <div class="image-gallery">
@@ -353,7 +625,7 @@ window.addEventListener('scroll', () => {
   <!-- Popup for All Images -->
   <div class="all-images-popup" id="allImagesPopup" style="display: none;">
     <div class="popup-content">
-      <button class="close-btn" onclick="closePopup()">Close</button>
+      <button class="close-btn" onclick="closePopup()">Back</button>
       <img src="images/Bali.svg" alt="Bali Image 1">
       <img src="images/Azerbaijan.svg" alt="Bali Image 2">
       <img src="images/Dubai.svg" alt="Bali Image 3">
@@ -365,15 +637,32 @@ window.addEventListener('scroll', () => {
   <!-- Details Section -->
   <div class="details-section">
     <div class="info">
-      <h2>Bali</h2>
-      <p><span style="background-color: rgb(216, 121, 4); padding:7px;border-radius:50px;color:white;font-size:12px;font-weight:800;">5D/4N</span> &nbsp; Stay Included</p>
+      <h1>Best Of Bali </h1>
+      <p>
+        <span style="background-color: rgb(216, 121, 4); padding: 10px 15px; border-radius: 50px; color: white; font-size: 16px; font-weight: 800;">5D/4N</span>
+        &nbsp; 
+        <i class="fa fa-hotel" aria-hidden="true"></i> Stay Included 
+        &nbsp; 
+        <i class="fa fa-plane" aria-hidden="true"></i> Sightseeing Included
+      </p>
+      
       <!-- <img src="bali-info.jpg" alt="Bali Info Image" width="100%"> -->
-      <div style="width: 90%;border:1px solid grey;padding:10px;border-radius:5px">
-        <h1 style="margin-bottom: 0;">INR 37,999</h1>
+      <div style="width: 97%;border:1px solid grey;padding:10px;border-radius:5px">
+        <h1 style="margin-bottom: 0;">
+          <span style="text-decoration: line-through; color: gray; font-size: 0.7em;">INR 47,499</span>
+          <span style="margin-left: 10px;">INR 37,999</span>
+        </h1>
         <div style="margin-top: 0;">Price per person</div>
-        <div style="text-align: right;">Rating: 4.7</div>
-        <button style="width: 100%; margin-top:10px;height:40px;background-color:#db7202;border:none;border-radius:5px;color:white;font-weight:900">Call Us</button>
-     </div>
+        <div style="text-align: right; font-size: 1.1em;">
+          Rating: 4.7 
+          <span style="color: gold; font-size: 1.1em;">★</span> <!-- Star icon -->
+        </div>
+        
+        
+        <button style="width: 100%; margin-top: 10px; height: 40px; background-color: #ffffff; border: 2px solid #db7202; border-radius: 5px; color: #db7202; font-weight: 900;">
+          Call Us
+        </button>
+             </div>
       <h3>Trip Highlights</h3>
     <div class="highlight-tags">
       <div class="h11">Uluwatu Temple</div>
@@ -386,18 +675,29 @@ window.addEventListener('scroll', () => {
     </div>
 
     <!-- Enquire Now Form Card -->
-    <div class="form-container">
-      <div class="form-card">
-        <h2>Enquire Now</h2>
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="Email">
-        <input type="tel" placeholder="+91 Phone">
-        <input type="date" placeholder="Travel Date">
-        <input type="number" placeholder="Travel Count">
-        <textarea placeholder="Message"></textarea>
-        <button>Send Enquiry</button>
-      </div>
-    </div>
+    <!-- Enquire Now Form Card -->
+<div class="form-container">
+  <div class="form-card">
+    <h2>Enquire Now</h2>
+    
+    <input type="text" id="fullName" placeholder="Full Name *" required>
+    <input type="email" id="email" placeholder="Email *" required>
+    <input type="tel" id="phone" placeholder="+91 Phone *" required>
+    <input type="text" id="travelDate" placeholder="Travel Date (dd-mm-yy) *" required>
+    <input type="number" id="travelCount" placeholder="Travel Count *" required>
+    <textarea id="message" placeholder="Message *" required></textarea>
+
+    <button type="submit">Send Enquiry</button>
+  </div>
+</div>
+
+<script>
+  flatpickr("#travelDate", {
+    dateFormat: "d-m-Y", // Set the format to dd-mm-yy
+    allowInput: true, // Allow manual input
+  });
+</script>
+
   </div>
 
   <!-- Trip Highlights -->
@@ -406,22 +706,62 @@ window.addEventListener('scroll', () => {
 
     
   <div class="itinerary">
-    <h3>Itinerary</h3>
-    
+    <nav class="nav-bar">
+    <div class="button-container">
+      <button class="dropdown-button active" id="itinerary-button" onclick="toggleItinerary()">
+        <i class="fas fa-calendar-alt"></i> Itinerary
+      </button>
+      <button class="dropdown-button" id="activities-button" onclick="toggleActivities()">
+        <i class="fas fa-bolt"></i> Activities
+      </button>
+      <button class="dropdown-button" id="stay-button" onclick="toggleStay()">
+        <i class="fas fa-bed"></i> Stay
+      </button>
+      
+  </div>
+</nav>
+  <div id="itinerary-content">
+    <!-- The carousel container -->
+<div class="carousel">
+  <!-- The carousel inner container -->
+  <div class="carousel-inner">
+    <!-- The carousel items -->
+    <div class="carousel-item active">
+      <img src="images/Azerbaijan.svg" alt="Image 1">
+    </div>
+    <div class="carousel-item">
+      <img src="images/Bali.svg" alt="Image 2">
+    </div>
+    <div class="carousel-item">
+      <img src="images/Dubai.svg" alt="Image 3">
+    </div>
+    <!-- Add more carousel items here -->
+  </div>
+  <!-- The carousel navigation -->
+  <!-- The carousel navigation -->
+  <a class="carousel-prev" onclick="carouselPrevClick()">«</a>
+  <a class="carousel-next" onclick="carouselNextClick()">»</a>
+</div>
     <div class="dropdown-container">
-      <button class="dropdown-button" onclick="toggleDetails('day1')">Day 1: Arrival and Uluwatu Temple</button>
+      <button class="dropdown-button1" onclick="toggleDetails('day1')"><span class="day-tag">Day 1</span>: Arrival and Uluwatu Temple</button>
       <div id="day1-details" class="dropdown-content">
-        <h4>Morning:</h4>
+        <h4>
+          <i class="fas fa-sun"></i> Morning:
+        </h4>
         <ul>
           <li>Arrival: Land at Ngurah Rai International Airport, Bali.</li>
           <li>Transfer to Hotel: Check-in at your hotel in the Uluwatu or Jimbaran area.</li>
         </ul>
-        <h4>Afternoon:</h4>
+        <h4>
+          <i class="fas fa-cloud-sun"></i> Afternoon:
+        </h4>
         <ul>
           <li>Lunch: Enjoy a meal at a local restaurant or at your hotel.</li>
           <li>Uluwatu Temple: Visit Uluwatu Temple, perched on a cliff with stunning ocean views. Explore the temple and watch the traditional Kecak dance performance in the evening.</li>
         </ul>
-        <h4>Evening:</h4>
+        <h4>
+          <i class="fas fa-moon"></i> Evening:
+        </h4>
         <ul>
           <li>Dinner: Dine at a seaside restaurant in Jimbaran Bay, known for its fresh seafood.</li>
         </ul>
@@ -429,14 +769,18 @@ window.addEventListener('scroll', () => {
     </div>
 
     <div class="dropdown-container">
-      <button class="dropdown-button" onclick="toggleDetails('day2')">Day 2: Nusa Penida Exploration</button>
+      <button class="dropdown-button1" onclick="toggleDetails('day2')"><span class="day-tag">Day 2</span>: Nusa Penida Exploration</button>
       <div id="day2-details" class="dropdown-content">
-        <h4>Morning:</h4>
+        <h4>
+          <i class="fas fa-sun"></i> Morning:
+        </h4>
         <ul>
           <li>Breakfast: At your hotel.</li>
           <li>Transfer to Nusa Penida: Take a fast boat from Sanur Beach to Nusa Penida Island.</li>
         </ul>
-        <h4>Afternoon:</h4>
+        <h4>
+          <i class="fas fa-cloud-sun"></i> Afternoon:
+        </h4>
         <ul>
           <li>Lunch: Enjoy a meal at a local restaurant on Nusa Penida.</li>
           <li>Nusa Penida Tour: Explore the island’s highlights, including:
@@ -447,7 +791,9 @@ window.addEventListener('scroll', () => {
             </ul>
           </li>
         </ul>
-        <h4>Evening:</h4>
+        <h4>
+          <i class="fas fa-moon"></i> Evening:
+        </h4>
         <ul>
           <li>Return to Bali: Take the fast boat back to Bali.</li>
           <li>Dinner: Relax and have dinner at your hotel or a nearby restaurant.</li>
@@ -456,19 +802,25 @@ window.addEventListener('scroll', () => {
     </div>
 
     <div class="dropdown-container">
-      <button class="dropdown-button" onclick="toggleDetails('day3')">Day 3: Waterfalls, ATV Adventure, and Beach Clubs</button>
+      <button class="dropdown-button1" onclick="toggleDetails('day3')"><span class="day-tag">Day 3</span>: Waterfalls, ATV Adventure, and Beach Clubs</button>
       <div id="day3-details" class="dropdown-content">
-        <h4>Morning:</h4>
+        <h4>
+          <i class="fas fa-sun"></i> Morning:
+        </h4>
         <ul>
           <li>Breakfast: At your hotel.</li>
           <li>Waterfall Visit: Explore one of Bali's beautiful waterfalls, such as Tegenungan Waterfall.</li>
         </ul>
-        <h4>Afternoon:</h4>
+        <h4>
+          <i class="fas fa-cloud-sun"></i> Afternoon:
+        </h4>
         <ul>
           <li>Lunch: Enjoy lunch at a local restaurant near the waterfalls.</li>
           <li>ATV Adventure: Embark on an ATV adventure through Bali's scenic landscapes, including rice fields, forests, and rivers.</li>
         </ul>
-        <h4>Evening:</h4>
+        <h4>
+          <i class="fas fa-moon"></i> Evening:
+        </h4>
         <ul>
           <li>Beach Club: Head to a popular beach club such as Potato Head Beach Club or Finns Beach Club for a relaxing evening by the ocean.</li>
           <li>Dinner: Dine at the beach club or explore dining options in the area.</li>
@@ -477,14 +829,18 @@ window.addEventListener('scroll', () => {
     </div>
 
     <div class="dropdown-container">
-      <button class="dropdown-button" onclick="toggleDetails('day4')">Day 4: Ubud and Rice Terraces</button>
+      <button class="dropdown-button1" onclick="toggleDetails('day4')"><span class="day-tag">Day 4</span>: Ubud and Rice Terraces</button>
       <div id="day4-details" class="dropdown-content">
-        <h4>Morning:</h4>
+        <h4>
+          <i class="fas fa-sun"></i> Morning:
+        </h4>
         <ul>
           <li>Breakfast: At your hotel.</li>
           <li>Transfer to Ubud: Travel to Ubud, Bali’s cultural heart.</li>
         </ul>
-        <h4>Afternoon:</h4>
+        <h4>
+          <i class="fas fa-cloud-sun"></i> Afternoon:
+        </h4>
         <ul>
           <li>Lunch: Enjoy lunch at a café or restaurant in Ubud.</li>
           <li>
@@ -494,7 +850,9 @@ known for their stunning green landscapes and traditional rice farming technique
   Market.
   </li>
         </ul>
-        <h4>Evening:</h4>
+        <h4>
+          <i class="fas fa-moon"></i> Evening:
+        </h4>
         <ul>
           <li>Dinner: Dine at a restaurant in Ubud, perhaps trying some traditional Balinese 
             cuisine</li>
@@ -503,26 +861,36 @@ known for their stunning green landscapes and traditional rice farming technique
     </div>
 
     <div class="dropdown-container">
-      <button class="dropdown-button" onclick="toggleDetails('day5')">Day 5: Garuda Wisnu Kencana and Departure</button>
+      <button class="dropdown-button1" onclick="toggleDetails('day5')"><span class="day-tag">Day 5</span>: Garuda Wisnu Kencana and Departure</button>
       <div id="day5-details" class="dropdown-content">
-        <h4>Early Morning:</h4>
+        <h4>
+          <i class="fas fa-sun"></i>Early Morning:
+        </h4>
         <ul>
           <li>Mount Batur Sunrise Trek: Depart early for a sunrise trek up Mount Batur. Enjoy panoramic views as the sun rises over the volcanic landscape.</li>
         </ul>
-        <h4>Morning:</h4>
+        <h4>
+          <i class="fas fa-sun"></i> Morning:
+        </h4>
         <ul>
           <li>Breakfast: Enjoy a breakfast with a view after the trek.</li>
         </ul>
-        <h4>Late Morning:</h4>
+        <h4>
+          <i class="fas fa-sun"></i>Late Morning:
+        </h4>
         <ul>
           <li>Transfer to Tirta Ganga: Head to the Tirta Ganga Water Palace.</li>
         </ul>
-        <h4>Afternoon:</h4>
+        <h4>
+          <i class="fas fa-cloud-sun"></i> Afternoon:
+        </h4>
         <ul>
           <li>Lunch: Have lunch at a local restaurant or café near Tirta Ganga.</li>
           <li>Tirta Ganga: Explore the Tirta Ganga Water Palace, known for its serene pools and beautiful gardens.</li>
         </ul>
-        <h4>Evening:</h4>
+        <h4>
+          <i class="fas fa-moon"></i> Evening:
+        </h4>
         <ul>
           <li>Return to Hotel: Head back to your hotel in Ubud or your base location.</li>
           <li>Dinner: Relax and have dinner at your hotel or a nearby restaurant.</li>
@@ -532,24 +900,94 @@ known for their stunning green landscapes and traditional rice farming technique
     </div>
 
     <div class="dropdown-container">
-      <button class="dropdown-button" onclick="toggleDetails('day6')">Day 6: Departure</button>
+      <button class="dropdown-button1" onclick="toggleDetails('day6')"><span class="day-tag">Day 6</span>: Departure</button>
       <div id="day6-details" class="dropdown-content">
-        <h4>Morning:</h4>
+        <h4>
+          <i class="fas fa-sun"></i> Morning:
+        </h4>
         <ul>
           <li>Breakfast: At your hotel.</li>
           <li>Garuda Wisnu Kencana: Visit the Garuda Wisnu Kencana Cultural Park to see the massive Garuda Wisnu Kencana statue and enjoy the cultural performances and art exhibitions.</li>
         </ul>
-        <h4>Afternoon:</h4>
+        <h4>
+          <i class="fas fa-cloud-sun"></i> Afternoon:
+        </h4>
         <ul>
           <li>Lunch: Have lunch at a restaurant in or near the cultural park.</li>
           <li>Shopping or Relaxation: If time permits, do some last-minute shopping or relaxation at a nearby café.</li>
         </ul>
-        <h4>Evening:</h4>
-        <ul>
+        <h4>
+          <i class="fas fa-moon"></i> Evening:
+        </h4>        <ul>
           <li>Transfer to Airport: Check out of your hotel and transfer to Ngurah Rai International Airport for your departure.</li>
         </ul>      </div>
     </div>
+    </div>
+    <div id="activities-content" class="dropdown-content" style="display: block; width: 600px; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+  <h4>Activities</h4>
+  <div id="activities-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/ullutu.jfif" alt="Uluwatu Temple" class="d-block w-100" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Uluwatu Temple</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/nusa.jfif" alt="Nusa Penida Exploration" class="d-block w-100" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Nusa Penida Exploration</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/atv.jfif" alt="Waterfalls, ATV Adventure, Beach Clubs" class="d-block w-100" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Waterfalls, ATV Adventure, Beach Clubs</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/ubud.jfif" alt="Ubud and Rice Terraces" class="d-block w-100" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Ubud and Rice Terraces</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/sunrise.jfif" alt="Mount Batur Sunrise and Tirta Ganga" class="d-block w-100" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Mount Batur Sunrise and Tirta Ganga</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/garuda.jfif" alt="Garuda Wisnu Kencana and Departure" class="d-block w-100" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Garuda Wisnu Kencana and Departure</h5>
+        </div>
+      </div>
+    </div>
+    <!-- Next and Previous Controls -->
+    <a class="carousel-control-prev" href="#activities-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#activities-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
 
+    
+    
+    
+    <div id="stay-content" class="dropdown-content" style="display: none;">
+      <!-- Stay content here -->
+      <h4>Stay</h4>
+      <ul>
+        <li>Hotel</li>
+        <li>Villa</li>
+        <li>Resort</li>
+      </ul>
+    </div>
   </div>
 
   <script>
@@ -572,6 +1010,94 @@ known for their stunning green landscapes and traditional rice farming technique
 function closePopup() {
   document.getElementById("allImagesPopup").style.display = "none";
 }
+function toggleItinerary() {
+  const itineraryContent = document.getElementById('itinerary-content');
+  const activitiesContent = document.getElementById('activities-content');
+  const stayContent = document.getElementById('stay-content');
+  itineraryContent.style.display = 'block';
+  activitiesContent.style.display = 'none';
+  stayContent.style.display = 'none';
+  document.getElementById('itinerary-button').classList.add('active');
+  document.getElementById('activities-button').classList.remove('active');
+  document.getElementById('stay-button').classList.remove('active');
+}
+
+function toggleActivities() {
+  const itineraryContent = document.getElementById('itinerary-content');
+  const activitiesContent = document.getElementById('activities-content');
+  const stayContent = document.getElementById('stay-content');
+  itineraryContent.style.display = 'none';
+  activitiesContent.style.display = 'block';
+  stayContent.style.display = 'none';
+  document.getElementById('itinerary-button').classList.remove('active');
+  document.getElementById('activities-button').classList.add('active');
+  document.getElementById('stay-button').classList.remove('active');
+}
+
+function toggleStay() {
+  const itineraryContent = document.getElementById('itinerary-content');
+  const activitiesContent = document.getElementById('activities-content');
+  const stayContent = document.getElementById('stay-content');
+  itineraryContent.style.display = 'none';
+  activitiesContent.style.display = 'none';
+  stayContent.style.display = 'block';
+  document.getElementById('itinerary-button').classList.remove('active');
+  document.getElementById('activities-button').classList.remove('active');
+  document.getElementById('stay-button').classList.add('active');
+}
+// Get the carousel elements
+const carousel = document.querySelector('.carousel');
+  const carouselInner = document.querySelector('.carousel-inner');
+  const carouselItems = document.querySelectorAll('.carousel-item');
+  const carouselPrev = document.querySelector('.carousel-prev');
+  const carouselNext = document.querySelector('.carousel-next');
+
+  // Set the current slide index
+  let currentIndex = 0;
+
+  // Event listeners for the navigation buttons
+  carouselPrev.addEventListener('click', carouselPrevClick);
+  carouselNext.addEventListener('click', carouselNextClick);
+
+  // Function to handle the previous button click
+  function carouselPrevClick() {
+    if (currentIndex === 0) {
+      currentIndex = carouselItems.length - 1;
+    } else {
+      currentIndex--;
+    }
+    updateCarousel();
+  }
+
+  // Function to handle the next button click
+  function carouselNextClick() {
+    if (currentIndex === carouselItems.length - 1) {
+      currentIndex = 0;
+    } else {
+      currentIndex++;
+    }
+    updateCarousel();
+  }
+
+  // Update the carousel
+  function updateCarousel() {
+    // Remove the active class from all carousel items
+    carouselItems.forEach((item) => item.classList.remove('active'));
+
+    // Add the active class to the current carousel item
+    carouselItems[currentIndex].classList.add('active');
+  }
+  window.addEventListener('scroll', function() {
+    const formCard = document.querySelector('.form-card');
+    const sticky = formCard.offsetTop; // Get the initial position of the form card
+
+    if (window.pageYOffset > sticky) {
+      formCard.style.position = 'fixed'; // Make it fixed when scrolling past its original position
+      formCard.style.top = '20px'; // Adjust this to set how far from the top it should stay
+    } else {
+      formCard.style.position = 'relative'; // Reset to relative position
+    }
+  });
   </script>
   </body>
   </html>
