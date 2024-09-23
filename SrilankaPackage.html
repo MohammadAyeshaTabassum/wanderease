@@ -626,17 +626,17 @@ window.addEventListener('scroll', () => {
   <div class="image-gallery">
     <!-- Left Large Image -->
     <div class="large-image">
-      <img src="images/countries/Bali.svg" alt="Bali Large Image">
+      <img src="images/countries/Srilanka.svg" alt="Bali Large Image">
     </div>
 
     <!-- Right Small Images (2x2 grid) -->
     <div class="small-images">
-      <img src="images/Activities/Bali/Bali-ATV-Adventure.svg" alt="Bali Small Image 1">
-      <img src="images/Activities/Bali/Bali-Garuda-Wisnu-Kencana.svg" alt="Bali Small Image 2">
-      <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Bali Small Image 3">
+      <img src="images/Activities/Srilanka/Srinlanka-Bentota.svg" alt="Bali Small Image 1">
+      <img src="images/Activities/Srilanka/Srinlanka-Colombo.svg" alt="Bali Small Image 2">
+      <img src="images/Activities/Srilanka/Srinlanka-Kandy.svg" alt="Bali Small Image 3">
       <!-- 4th Image with View All -->
       <div class="view-all">
-        <img src="images/Activities/Bali/Bali-Nusa-Penida.svg" alt="Bali Small Image 4">
+        <img src="images/Activities/Srilanka/Srinlanka-Pinnawala.svg" alt="Bali Small Image 4">
         <div class="overlay" onclick="showAllImages()">View All</div>
       </div>
     </div>
@@ -646,18 +646,18 @@ window.addEventListener('scroll', () => {
   <div class="all-images-popup" id="allImagesPopup" style="display: none;">
     <div class="popup-content">
       <button class="close-btn" onclick="closePopup()">Back</button>
-      <img src="images/Activities/Bali/Bali-Uluwatu.svg" alt="Bali Image 1">
-      <img src="images/Activities/Bali/Bali-Ubud.svg" alt="Bali Image 2">
-      <img src="images/Activities/Bali/Bali-Tirta-Ganga.svg" alt="Bali Image 3">
-      <img src="images/Activities/Bali/Bali-Nusa-Penida.svg" alt="Bali Image 4">
-      <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Bali Image 5">
+      <img src="images/countries/Srilanka.svg" alt="Bali Image 1">
+      <img src="images/Activities/Srilanka/Srinlanka-Bentota.svg" alt="Bali Image 2">
+      <img src="images/Activities/Srilanka/Srinlanka-Colombo.svg" alt="Bali Image 3">
+      <img src="images/Activities/Srilanka/Srinlanka-Kandy.svg" alt="Bali Image 4">
+      <img src="images/Activities/Srilanka/Srinlanka-Pinnawala.svg" alt="Bali Image 5">
     </div>
   </div>
 
   <!-- Details Section -->
   <div class="details-section">
     <div class="info">
-      <h1>Best Of Bali </h1>
+      <h1>Sri Lanka: The Jewel of the Indian Ocean</h1>
       <p>
         <span style="background-color: rgb(216, 121, 4); padding: 10px 15px; border-radius: 50px; color: white; font-size: 16px; font-weight: 800;">5D/4N</span>
         &nbsp; 
@@ -669,12 +669,12 @@ window.addEventListener('scroll', () => {
       <!-- <img src="bali-info.jpg" alt="Bali Info Image" width="100%"> -->
       <div style="width: 97%;border:1px solid grey;padding:10px;border-radius:5px">
         <h1 style="margin-bottom: 0;">
-          <span style="text-decoration: line-through; color: gray; font-size: 0.7em;">INR 47,499</span>
-          <span style="margin-left: 10px;">INR 37,999</span>
+          <span style="text-decoration: line-through; color: gray; font-size: 0.7em;">INR 43,749</span>
+          <span style="margin-left: 10px;">INR 34,999</span>
         </h1>
         <div style="margin-top: 0;">Price per person</div>
         <div style="text-align: right; font-size: 1.1em;">
-          Rating: 4.7 
+          Rating: 4.7
           <span style="color: gold; font-size: 1.1em;">★</span> <!-- Star icon -->
         </div>
         
@@ -685,12 +685,28 @@ window.addEventListener('scroll', () => {
              </div>
       <h3>Trip Highlights</h3>
     <div class="highlight-tags">
-      <div class="h11">Uluwatu Temple</div>
-      <div class="h11">Nusa Penida Exploration</div>
-      <div class="h11">Waterfalls, ATV Adventure, Beach Clubs</div>
-      <div class="h11">Ubud and Rice Terraces</div>
-      <div class="h11">Mount Batur Sunrise and Tirta Ganga</div>
-      <div class="h11">Garuda Wisnu Kencana and Departure</div>
+      <div class="h11">Arrival in Colombo
+    </div>
+      <div class="h11">Pinnawala Elephant Orphanagey</div>
+      <div class="h11">Transfer to Kandy</div>
+      <div class="h11"> Lake Drive with 
+        Kandyan Dance Show</div>
+      <div class="h11">Kandy Sightseeing Tour</div>
+      <div class="h11">Royal Botanical Gardens 
+    </div>
+      <div class="h11">Temple of the Tooth Relic (Sri Dalada Maligawa)
+    </div>
+      <div class="h11">Arrival in Bentota</div>
+
+      <div class="h11">Bentota Beach</div>
+
+      <div class="h11">Arrival in Colombo</div>
+
+
+      <div class="h11">Colombo National Museum</div>
+      <div class="h11">Pettah Market</div>
+      <div class="h11">Colombo Fort</div>
+
     </div>
     </div>
 
@@ -731,9 +747,7 @@ window.addEventListener('scroll', () => {
       <button class="dropdown-button active" id="itinerary-button" onclick="toggleItinerary()">
         <i class="fas fa-calendar-alt"></i> Itinerary
       </button>
-      <button class="dropdown-button" id="activities-button" onclick="toggleActivities()">
-        <i class="fas fa-bolt"></i> Activities
-      </button>
+      
       <button class="dropdown-button" id="stay-button" onclick="toggleStay()">
         <i class="fas fa-bed"></i> Stay
       </button>
@@ -747,13 +761,13 @@ window.addEventListener('scroll', () => {
   <div class="carousel-inner">
     <!-- The carousel items -->
     <div class="carousel-item active">
-      <img src="images/Activities/Bali/Bali-ATV-Adventure.svg" alt="Image 1">
+      <img src="images/Activities/Srilanka/Srinlanka-Bentota.svg" alt="Image 1">
     </div>
     <div class="carousel-item">
-      <img src="images/Activities/Bali/Bali-Garuda-Wisnu-Kencana.svg" alt="Image 2">
+      <img src="images/Activities/Srilanka/Srinlanka-Colombo.svg" alt="Image 2">
     </div>
     <div class="carousel-item">
-      <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Image 3">
+      <img src="images/Activities/Srilanka/Srinlanka-Pinnawala.svg" alt="Image 3">
     </div>
     <!-- Add more carousel items here -->
   </div>
@@ -762,219 +776,134 @@ window.addEventListener('scroll', () => {
   <a class="carousel-prev" onclick="carouselPrevClick()">«</a>
   <a class="carousel-next" onclick="carouselNextClick()">»</a>
 </div>
-    <div class="dropdown-container">
-      <button class="dropdown-button1" onclick="toggleDetails('day1')"><span class="day-tag">Day 1</span>: Arrival and Uluwatu Temple</button>
-      <div id="day1-details" class="dropdown-content">
-        <h4>
-          <i class="fas fa-sun"></i> Morning:
-        </h4>
-        <ul>
-          <li>Arrival: Land at Ngurah Rai International Airport, Bali.</li>
-          <li>Transfer to Hotel: Check-in at your hotel in the Uluwatu or Jimbaran area.</li>
-        </ul>
-        <h4>
-          <i class="fas fa-cloud-sun"></i> Afternoon:
-        </h4>
-        <ul>
-          <li>Lunch: Enjoy a meal at a local restaurant or at your hotel.</li>
-          <li>Uluwatu Temple: Visit Uluwatu Temple, perched on a cliff with stunning ocean views. Explore the temple and watch the traditional Kecak dance performance in the evening.</li>
-        </ul>
-        <h4>
-          <i class="fas fa-moon"></i> Evening:
-        </h4>
-        <ul>
-          <li>Dinner: Dine at a seaside restaurant in Jimbaran Bay, known for its fresh seafood.</li>
-        </ul>
-      </div>
+<div class="dropdown-container">
+    <button class="dropdown-button1" onclick="toggleDetails('day1')"><span class="day-tag">Day 1</span>: Arrival in Colombo | Pinnawala Elephant Orphanage | Transfer to Kandy | Lake Drive with Kandyan Dance Show</button>
+    <div id="day1-details" class="dropdown-content">
+      <h4>
+        <i class="fas fa-sun"></i> Morning:
+      </h4>
+      <ul>
+        <li>Arrive at Bandaranaike International Airport, Colombo.</li>
+        <li>Pick up a rental car or arrange for a private transfer.</li>
+        <li>Travel to Pinnawala Elephant Orphanage (approximately 1.5 hours from Colombo). Spend some time observing and feeding the elephants.</li>
+      </ul>
+      <h4>
+        <i class="fas fa-cloud-sun"></i> Afternoon:
+      </h4>
+      <ul>
+        <li>Continue your journey to Kandy (around 2.5 hours from Pinnawala). Check in at your hotel in Kandy.</li>
+        <li>Enjoy a leisurely lake drive around Kandy Lake.</li>
+      </ul>
+      <h4>
+        <i class="fas fa-moon"></i> Evening:
+      </h4>
+      <ul>
+        <li>Attend a traditional Kandyan Dance Show, which typically starts around 5-6 PM.</li>
+        <li>Have dinner at a local restaurant or your hotel.</li>
+      </ul>
     </div>
+  </div>
+  
+  <div class="dropdown-container">
+    <button class="dropdown-button1" onclick="toggleDetails('day2')"><span class="day-tag">Day 2</span>: Kandy Sightseeing Tour</button>
+    <div id="day2-details" class="dropdown-content">
+      <h4>
+        <i class="fas fa-sun"></i> Morning:
+      </h4>
+      <ul>
+        <li>Visit the Temple of the Tooth Relic (Sri Dalada Maligawa), a significant religious site in Kandy.</li>
+        <li>Explore the Royal Botanical Gardens in Peradeniya, known for its vast collection of plants and beautiful landscapes.</li>
+      </ul>
+      <h4>
+        <i class="fas fa-cloud-sun"></i> Afternoon:
+      </h4>
+      <ul>
+        <li>Visit the Kandy Cultural Centre and take a stroll around the Kandy Market for local crafts and souvenirs.</li>
+        <li>Enjoy lunch at a local restaurant.</li>
+      </ul>
+      <h4>
+        <i class="fas fa-moon"></i> Evening:
+      </h4>
+      <ul>
+        <li>Relax and have dinner at your hotel or a nearby restaurant.</li>
+        <li>Optional: Take a peaceful evening walk around Kandy Lake.</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="dropdown-container">
+    <button class="dropdown-button1" onclick="toggleDetails('day3')"><span class="day-tag">Day 3</span>: Arrival in Bentota | Bentota Sightseeing Tour</button>
+    <div id="day3-details" class="dropdown-content">
+      <h4>
+        <i class="fas fa-sun"></i> Morning:
+      </h4>
+      <ul>
+        <li>Check out from your Kandy hotel and travel to Bentota (approximately a 5-6 hour drive).</li>
+        <li>Check in at your hotel in Bentota.</li>
+      </ul>
+      <h4>
+        <i class="fas fa-cloud-sun"></i> Afternoon:
+      </h4>
+      <ul>
+        <li>Enjoy some relaxation time on Bentota Beach.</li>
+        <li>Visit the Bentota Turtle Hatchery or enjoy a boat ride on the Bentota River.</li>
+      </ul>
+      <h4>
+        <i class="fas fa-moon"></i> Evening:
+      </h4>
+      <ul>
+        <li>Have dinner at a beachside restaurant or your hotel. Enjoy the coastal atmosphere and sunset.</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="dropdown-container">
+    <button class="dropdown-button1" onclick="toggleDetails('day4')"><span class="day-tag">Day 4</span>: Arrival in Colombo | Colombo Sightseeing Tour</button>
+    <div id="day4-details" class="dropdown-content">
+      <h4>
+        <i class="fas fa-sun"></i> Morning:
+      </h4>
+      <ul>
+        <li>Check out from your Bentota hotel and head to Colombo (approximately 1.5-2 hours’ drive).</li>
+        <li>Check in at your Colombo hotel.</li>
+      </ul>
+      <h4>
+        <i class="fas fa-cloud-sun"></i> Afternoon:
+      </h4>
+      <ul>
+        <li>Visit key attractions in Colombo, including the Galle Face Green, Pettah Market, Colombo National Museum, and the Old Dutch Hospital.</li>
+        <li>Enjoy lunch at a local café or restaurant.</li>
+      </ul>
+      <h4>
+        <i class="fas fa-moon"></i> Evening:
+      </h4>
+      <ul>
+        <li>Explore Colombo Fort and Independence Square.</li>
+        <li>Have a final dinner at a recommended restaurant in Colombo.</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="dropdown-container">
+    <button class="dropdown-button1" onclick="toggleDetails('day5')"><span class="day-tag">Day 5</span>: Departure Day</button>
+    <div id="day5-details" class="dropdown-content">
+      <h4>
+        <i class="fas fa-sun"></i> Morning:
+      </h4>
+      <ul>
+        <li>Depending on your flight time, you might have some last-minute shopping or relaxation in Colombo.</li>
+        <li>Check out from your hotel and transfer to Bandaranaike International Airport.</li>
+      </ul>
+      <h4>
+        <i class="fas fa-cloud-sun"></i> Afternoon:
+      </h4>
+      <ul>
+        <li>Depart from Sri Lanka with wonderful memories of your trip.</li>
+      </ul>
+    </div>
+  </div>
+  
 
-    <div class="dropdown-container">
-      <button class="dropdown-button1" onclick="toggleDetails('day2')"><span class="day-tag">Day 2</span>: Nusa Penida Exploration</button>
-      <div id="day2-details" class="dropdown-content">
-        <h4>
-          <i class="fas fa-sun"></i> Morning:
-        </h4>
-        <ul>
-          <li>Breakfast: At your hotel.</li>
-          <li>Transfer to Nusa Penida: Take a fast boat from Sanur Beach to Nusa Penida Island.</li>
-        </ul>
-        <h4>
-          <i class="fas fa-cloud-sun"></i> Afternoon:
-        </h4>
-        <ul>
-          <li>Lunch: Enjoy a meal at a local restaurant on Nusa Penida.</li>
-          <li>Nusa Penida Tour: Explore the island’s highlights, including:
-            <ul>
-              <li>Keling King Beach: Famous for its dramatic views and unique rock formations.</li>
-              <li>Angel’s Billabong: A natural infinity pool with clear water.</li>
-              <li>Broken Beach: A picturesque natural archway over the ocean.</li>
-            </ul>
-          </li>
-        </ul>
-        <h4>
-          <i class="fas fa-moon"></i> Evening:
-        </h4>
-        <ul>
-          <li>Return to Bali: Take the fast boat back to Bali.</li>
-          <li>Dinner: Relax and have dinner at your hotel or a nearby restaurant.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="dropdown-container">
-      <button class="dropdown-button1" onclick="toggleDetails('day3')"><span class="day-tag">Day 3</span>: Waterfalls, ATV Adventure, and Beach Clubs</button>
-      <div id="day3-details" class="dropdown-content">
-        <h4>
-          <i class="fas fa-sun"></i> Morning:
-        </h4>
-        <ul>
-          <li>Breakfast: At your hotel.</li>
-          <li>Waterfall Visit: Explore one of Bali's beautiful waterfalls, such as Tegenungan Waterfall.</li>
-        </ul>
-        <h4>
-          <i class="fas fa-cloud-sun"></i> Afternoon:
-        </h4>
-        <ul>
-          <li>Lunch: Enjoy lunch at a local restaurant near the waterfalls.</li>
-          <li>ATV Adventure: Embark on an ATV adventure through Bali's scenic landscapes, including rice fields, forests, and rivers.</li>
-        </ul>
-        <h4>
-          <i class="fas fa-moon"></i> Evening:
-        </h4>
-        <ul>
-          <li>Beach Club: Head to a popular beach club such as Potato Head Beach Club or Finns Beach Club for a relaxing evening by the ocean.</li>
-          <li>Dinner: Dine at the beach club or explore dining options in the area.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="dropdown-container">
-      <button class="dropdown-button1" onclick="toggleDetails('day4')"><span class="day-tag">Day 4</span>: Ubud and Rice Terraces</button>
-      <div id="day4-details" class="dropdown-content">
-        <h4>
-          <i class="fas fa-sun"></i> Morning:
-        </h4>
-        <ul>
-          <li>Breakfast: At your hotel.</li>
-          <li>Transfer to Ubud: Travel to Ubud, Bali’s cultural heart.</li>
-        </ul>
-        <h4>
-          <i class="fas fa-cloud-sun"></i> Afternoon:
-        </h4>
-        <ul>
-          <li>Lunch: Enjoy lunch at a café or restaurant in Ubud.</li>
-          <li>
-            Rice Terraces: Explore the iconic Tegalalang Rice Terraces or Jatiluwih Rice Terraces, 
-known for their stunning green landscapes and traditional rice farming techniques.</li>
-<li>Ubud Market: Browse local crafts, souvenirs, and traditional Balinese items at Ubud 
-  Market.
-  </li>
-        </ul>
-        <h4>
-          <i class="fas fa-moon"></i> Evening:
-        </h4>
-        <ul>
-          <li>Dinner: Dine at a restaurant in Ubud, perhaps trying some traditional Balinese 
-            cuisine</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="dropdown-container">
-      <button class="dropdown-button1" onclick="toggleDetails('day5')"><span class="day-tag">Day 5</span>: Garuda Wisnu Kencana and Departure</button>
-      <div id="day5-details" class="dropdown-content">
-        <h4>
-          <i class="fas fa-sun"></i>Early Morning:
-        </h4>
-        <ul>
-          <li>Mount Batur Sunrise Trek: Depart early for a sunrise trek up Mount Batur. Enjoy panoramic views as the sun rises over the volcanic landscape.</li>
-        </ul>
-        <h4>
-          <i class="fas fa-sun"></i> Morning:
-        </h4>
-        <ul>
-          <li>Breakfast: Enjoy a breakfast with a view after the trek.</li>
-        </ul>
-        <h4>
-          <i class="fas fa-sun"></i>Late Morning:
-        </h4>
-        <ul>
-          <li>Transfer to Tirta Ganga: Head to the Tirta Ganga Water Palace.</li>
-        </ul>
-        <h4>
-          <i class="fas fa-cloud-sun"></i> Afternoon:
-        </h4>
-        <ul>
-          <li>Lunch: Have lunch at a local restaurant or café near Tirta Ganga.</li>
-          <li>Tirta Ganga: Explore the Tirta Ganga Water Palace, known for its serene pools and beautiful gardens.</li>
-        </ul>
-        <h4>
-          <i class="fas fa-moon"></i> Evening:
-        </h4>
-        <ul>
-          <li>Return to Hotel: Head back to your hotel in Ubud or your base location.</li>
-          <li>Dinner: Relax and have dinner at your hotel or a nearby restaurant.</li>
-        </ul>
-        
-      </div>
-    </div>
-
-    <div class="dropdown-container">
-      <button class="dropdown-button1" onclick="toggleDetails('day6')"><span class="day-tag">Day 6</span>: Departure</button>
-      <div id="day6-details" class="dropdown-content">
-        <h4>
-          <i class="fas fa-sun"></i> Morning:
-        </h4>
-        <ul>
-          <li>Breakfast: At your hotel.</li>
-          <li>Garuda Wisnu Kencana: Visit the Garuda Wisnu Kencana Cultural Park to see the massive Garuda Wisnu Kencana statue and enjoy the cultural performances and art exhibitions.</li>
-        </ul>
-        <h4>
-          <i class="fas fa-cloud-sun"></i> Afternoon:
-        </h4>
-        <ul>
-          <li>Lunch: Have lunch at a restaurant in or near the cultural park.</li>
-          <li>Shopping or Relaxation: If time permits, do some last-minute shopping or relaxation at a nearby café.</li>
-        </ul>
-        <h4>
-          <i class="fas fa-moon"></i> Evening:
-        </h4>        <ul>
-          <li>Transfer to Airport: Check out of your hotel and transfer to Ngurah Rai International Airport for your departure.</li>
-        </ul>      </div>
-    </div>
-    </div>
-    <div id="activities-content" class="dropdown-content" style="display: none;">
-      <div class="carousel1">
-        <div class="carousel1-inner">
-          <div class="carousel1-item active">
-            <img src="images/Activities/Bali/Bali-Uluwatu.svg" alt="Uluwatu Temple">
-            <h4>Uluwatu Temple</h4>
-          </div>
-          <div class="carousel1-item">
-            <img src="images/Activities/Bali/Bali-Nusa-Penida.svg" alt="Nusa Penida Exploration">
-            <h4>Nusa Penida Exploration</h4>
-          </div>
-          <div class="carousel1-item">
-            <img src="images/Activities/Bali/Bali-ATV-Adventure.svg" alt="Waterfalls, ATV Adventure, Beach Clubs">
-            <h4>Waterfalls, ATV Adventure, Beach Clubs</h4>
-          </div>
-          <div class="carousel1-item">
-            <img src="images/Activities/Bali/Bali-Ubud.svg" alt="Ubud and Rice Terraces">
-            <h4>Ubud and Rice Terraces</h4>
-          </div>
-          <div class="carousel1-item">
-            <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Mount Batur Sunrise and Tirta Ganga">
-            <h4>Mount Batur Sunrise and Tirta Ganga</h4>
-          </div>
-          <div class="carousel1-item">
-            <img src="images/Activities/Bali/Bali-Garuda-Wisnu-Kencana.svg" alt="Garuda Wisnu Kencana and Departure">
-            <h4>Garuda Wisnu Kencana and Departure</h4>
-          </div>
-        </div>
-        <a class="carousel1-prev" onclick="carousel1PrevClick()">«</a>
-        <a class="carousel1-next" onclick="carousel1NextClick()">»</a>
-      </div>
-    </div>
     <div id="stay-content" class="dropdown-content" style="display: none;">
       <!-- Stay content here -->
       <h4>Stay</h4>
