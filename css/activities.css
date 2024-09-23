@@ -1,0 +1,67 @@
+.activities{
+    border-radius: 1vmin;
+    font-weight: 700;
+    background-color: #db7202;
+    padding: 10px;
+}
+body{
+    background-color: #f5f5f5;
+}
+
+.main-container{
+    margin-top: 30px;
+    width: 94%;
+    margin-left: 3%;
+    border-radius: 1vmin;
+    /* background-color: rgba(250, 235, 215, 0.459); */
+    padding: 30px;
+}
+.c1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.span{
+    font-size: 24px;
+    color: #db7202;
+    font-weight: 600;
+    /* margin: 30px; */
+    /* margin-bottom: 0px; */
+    background-color: antiquewhite;
+    width: 100%;
+    padding: 10px;
+    border-radius: 1vmin;
+}
+.activity-card{
+    width: 350px;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+.activity-card:hover {
+    transform: translateY(-10px);
+  }
+
+.activity-card-title
+{
+    margin-top: 10px;
+    color: #db7202;
+}
+.activity-card-text{
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 14px;
+}
+.contact-acti{
+    width: 100%;
+    padding: 10px;
+    background-color: #db7202;
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    border-radius: 1vmin;
+}
+
