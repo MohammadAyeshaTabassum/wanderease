@@ -1,18 +1,35 @@
-var btn = document.getElementById('btn');
-btn.addEventListener('click', function(e){
-    alert("hello");
-    e.preventDefault()
-    var email = document.getElementById("email").ariaValueMax;
+document.getElementById('btn').addEventListener('click', function (e) {
+    e.preventDefault();
 
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "Ayesha",
-        Password : "ecjexxsgloyfvgap",
-        To : 'bennyabhishikth333@gmail.com',
-        From : email,
-        Subject : "This is the subject",
-        Body : "And this is the body"
-    }).then(
-      message => alert(message)
-    );
-})
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const travelDate = document.getElementById('travelDate').value;
+    const travelCount = document.getElementById('travelCount').value;
+    const message = document.getElementById('message').value;
+
+    const data = {
+        name,
+        email,
+        phone,
+        travelDate,
+        travelCount,
+        message
+    };
+
+    fetch('http://localhost:8081/api/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('Email sent successfully!');
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to send email.');
+    });
+});

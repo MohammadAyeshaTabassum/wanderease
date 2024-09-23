@@ -700,14 +700,16 @@ window.addEventListener('scroll', () => {
   <div class="form-card">
     <h2>Enquire Now</h2>
     
-    <input type="text" id="fullName" placeholder="Full Name *" required>
-    <input type="email" id="email" placeholder="Email *" required>
-    <input type="tel" id="phone" placeholder="+91 Phone *" required>
-    <input type="text" id="travelDate" placeholder="Travel Date (dd-mm-yy) *" required>
-    <input type="number" id="travelCount" placeholder="Travel Count *" required>
-    <textarea id="message" placeholder="Message *" required></textarea>
-
-    <button type="submit">Send Enquiry</button>
+    <form >
+      <input type="text" id="name" placeholder="Full Name *" required>
+      <input type="email" id="email" placeholder="Email *" required>
+      <input type="tel" id="phone" placeholder="+91 Phone *" required>
+      <input type="text" id="travelDate" placeholder="Travel Date (dd-mm-yy) *" required>
+      <input type="number" id="travelCount" placeholder="Travel Count *" required>
+      <textarea id="message" placeholder="Message *" required></textarea>
+  
+      <button id="btn" type="submit">Send Enquiry</button>
+  </form>
   </div>
 </div>
 
@@ -717,6 +719,7 @@ window.addEventListener('scroll', () => {
     allowInput: true, // Allow manual input
   });
 </script>
+<script src="js/mail.js"></script>
 
   </div>
 
