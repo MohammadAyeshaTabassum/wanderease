@@ -584,6 +584,509 @@
 .carousel1-next {
   right: 0;
 }
+
+#stay-content {
+  position: relative;
+  width: 61%; /* Decrease the width to 61% as specified */
+  left: -30px; /* Move the container to the very left */
+  padding: 0; 
+  margin: 0; 
+  margin-top: 30px;
+}
+/* Carousel container inside Stay content */
+#stay-content .carousel-inner {
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+}
+#stay-content .carousel-item img {
+  position: relative;
+  left: 35px; /* Move image left within carousel */
+  max-width: 100%; /* Ensure the image stays responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+/* Adjustments if you're using Bootstrap carousel */
+#stay-content .carousel {
+  margin-left: -30px; /* Move the entire carousel left */
+}
+
+/* Mobile media query (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  #stay-content {
+    width: 100%; /* Full width on mobile */
+    left: 0; /* No left offset on mobile */
+    margin-top: 15px; /* Reduce top margin on mobile */
+  }
+  #stay-content .carousel-inner {
+    flex-wrap: wrap; /* Allow carousel items to wrap on mobile */
+  }
+  #stay-content .carousel-item img {
+    left: 0; /* No left offset on mobile */
+    width: 100%; /* Full width on mobile */
+    height: 150px; /* Set a fixed height for mobile */
+  }
+  /* Adjustments if you're using Bootstrap carousel */
+  #stay-content .carousel {
+    margin-left: 0; /* No left margin on mobile */
+  }
+}
+  
+.mobile-form-container {
+  display: none; /* Hide the form container in desktop view */
+}
+
+@media only screen and (max-width: 480px) {
+  .mobile-form-container {
+  display: block; /* Show the form container in mobile view */
+  padding: 10px; /* Decrease padding to 10px */
+  margin: 10px 0; /* Set margin to 10px top and bottom */
+  width: 100%; /* Set width to 100% of the parent container */
+  background-color: #fff; /* Add a background color to the form container */
+  border: 1px solid #ddd; /* Add a border to the form container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow to the form container */
+  height: 350px; /* Set a fixed height for the container */
+  margin-left: -10px; /* Set margin-left to -20px to move it more to the left */
+}
+.mobile-form-container input, .mobile-form-container textarea {
+  width: 90%; /* Set width to 90% of the parent container */
+  padding: 5px; /* Decrease padding to 5px */
+  margin: 2px 0; /* Decrease margin to 2px */
+  height: 25px; /* Set a fixed height for the inputs */
+  border-radius: 5px; /* Add a 5px border radius to round the corners */
+}
+.mobile-form-container button {
+  width: 50%; /* Set width to 90% of the parent container */
+  padding: 5px; /* Decrease padding to 5px */
+  height: 30px; /* Set a fixed height for the button */
+  background-color: #db7202;
+}
+}
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header {
+    display: flex; /* Ensure flexbox is applied */
+    align-items: center; /* Align items vertically in the center */
+    padding: 10px;
+  }
+  header img {
+    width: 40px;
+    height: 30px;
+    margin-left: auto; /* Push the image to the right */
+    margin-right: 10px; /* Add some space from the right edge */
+  }
+  header input {
+    width: 100%;
+    margin-left: 0;
+    padding: 8px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .image-gallery {
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px;
+  }
+  .large-image {
+    width: 100%;
+    height: 200px;
+  }
+  .large-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .small-images {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+    width: 100%;
+  }
+  .small-images img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .all-images-popup {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .all-images-popup img {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .details-section {
+    flex-direction: column;
+    margin: 40px;
+    align-items: flex-start !important; /* added to move to left side */
+  }
+  @media only screen and (max-width: 480px) {
+  /* target the element with the styles */
+  .details-section .info {
+    margin-left:-10px; /* reset margin left to 0 */
+    margin-right: auto; /* set margin right to auto to move to left side */
+    width:100%;
+  }
+}
+  .details-section .form-container {
+    width: 100%;
+    padding-left: 10px;
+  }
+  @media only screen and (max-width: 768px) {
+  .details-section .info p span {
+    /* override default styles for mobile view */
+    padding: 5px 20px;
+    font-size: 10px;
+    border-radius: 25px !important; /* decreased border-radius for mobile view */
+    width: 50px !important; /* decreased width for mobile view */
+    height: 16px !important; /* decreased height for mobile view */
+    
+    
+    display: block !important; /* make the span element a block element */
+    margin-bottom: 3px !important; /* add a gap between the 5D/4N text and the <i> tags */
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* target the parent element of the text */
+  .details-section .info p span {
+    display: block; /* make the span element a block element */
+  }
+  /* target the <i> tags and their corresponding text */
+  .fa-hotel, .fa-plane {
+    display: inline-block; /* make the <i> tags inline-block */
+  }
+  .fa-hotel::after, .fa-plane::after {
+    content: none; /* remove the pseudo-element */
+  }
+  [data-text] {
+    display: inline-block; /* make the text inline-block */
+    margin-left: 10px; /* add a gap between the icon and the text */
+  }
+}
+}
+@media only screen and (max-width: 480px) {
+  
+  .form-container input, .form-container textarea {
+    width: 50%;
+    padding: 5px;
+    margin: 5px 0;
+  }
+  .form-container button {
+    width: 30% !important;
+    padding: 5px;
+  }
+  
+  .form-container {
+  width: 70%; /* Decrease width to 70% or adjust as needed */
+  max-width: 400px; /* Set a maximum width for larger screens */
+  padding: 10px;
+  position: fixed; /* Keep the form fixed */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position */
+  overflow-x: hidden;
+  z-index: 1000; /* Ensure it appears above other content */
+  display: none;
+}
+.close-button {
+  display: block; /* Always show close button */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red; /* Customize the color */
+  color: white; /* Customize text color */
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it is above the form */
+}
+}
+@media only screen and (min-width: 481px) {
+  .close-button {
+    display: none; /* Hide close button on larger screens */
+  }
+}
+@media only screen and (max-width: 480px) {
+  .trip-highlights {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end; /* align it to the right */
+  }
+  .highlight-tags {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 0px;
+    width:100%;
+  }
+  .highlight-tags div {
+    background-color: lightgreen;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .itinerary {
+    margin-top: 10px;
+    padding: 30px;
+  }
+  .itinerary select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .itinerary-details {
+    margin-top: 10px;
+  }
+  .itinerary-details div {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .dropdown-container {
+    margin: 0px;
+    width: 100%;
+  }
+  .dropdown-content {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #db7202;
+    border-radius: 5px;
+  }
+  .dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .dropdown-content ul li {
+    margin: 5px 0;
+    padding: 8px;
+    border-bottom: 1px solid #e2e2e2;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .end-trip {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .arrow-mark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #2a5da5;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .button-container button {
+    width: 45%;
+    margin: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #f9f5f5;
+    padding: 5px;
+    border-bottom: 1px solid #f9f5f5;
+    width: 100%;
+    margin-left: -6px;
+    margin-top: -50px;
+    border-radius: 10px;
+  }
+  .nav-bar .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-bar .dropdown-button {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #db7202;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .carousel {
+    width: 100%;
+    height: 200px;
+    margin: 20px auto;
+  }
+  .carousel-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .carousel-item {
+    width: 100%;
+    height: 100%;
+  }
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .carousel-prev {
+    left: 0;
+  }
+  .carousel-next {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .carousel1 {
+    width: 100%;
+    height: 200px;
+    margin: 20px auto;
+  }
+  .carousel1-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .carousel1-item {
+    width: 100%;
+    height: 100%;
+  }
+  .carousel1-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .carousel1-prev, .carousel1-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .carousel1-prev {
+    left: 0;
+  }
+  .carousel1-next {
+    right: 0;
+  }
+}
+
+/* Style the desktop popup */
+#desktop-popup {
+  display: none;
+  position: absolute;
+  background-color: #f7dc6f !important; /* bright yellow */
+  border: 1px solid #ffd700 !important; /* golden yellow */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#close-popup {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* dark gray */
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+#close-popup:hover {
+  color: #8bc34a; /* bright green */
+}
+/* Position the desktop popup near the button */
+/* Position the desktop popup near the button */
+#desktop-popup {
+  position: absolute;
+  top: 100%; /* position the popup directly below the button */
+  left: 0;
+  transform: translateX(0);
+}
+#call-us-button {
+  position: relative; /* add relative positioning to the button */
+}
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  #desktop-popup {
+    display: none !important;
+  }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  #desktop-popup {
+    display: none !important;
+  }
+}
+.end-trip {
+  text-align: center;
+  margin-top: -50px; /* move the text and stars upwards */
+}
+.end-trip-star {
+  margin-top: 10px; /* adjust the gap between the stars and text */
+}
+@media only screen and (max-width: 480px) {
+  .end-trip-star {
+    margin-top: 25px; /* reduce the gap between the stars and text in mobile view */
+  }
+}
+
+@keyframes fontSize {
+  0% {
+    font-size: 1.1em;
+  }
+  100% {
+    font-size: 2.2em;
+  }
+}
+.end-trip {
+  font-size: 3em;
+  font-family: 'Brush Script MT', cursive;
+  font-style: cursive;
+  font-weight: lighter;
+  animation: fontSize 2s infinite;
+}
+
+
+
   </style>
   <!-- Include flatpickr CSS and JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -679,9 +1182,20 @@ window.addEventListener('scroll', () => {
         </div>
         
         
-        <button style="width: 100%; margin-top: 10px; height: 40px; background-color: #ffffff; border: 2px solid #db7202; border-radius: 5px; color: #db7202; font-weight: 900;">
-          Call Us
-        </button>
+<button id="call-us-button" style="width: 100%; margin-top: 10px; height: 40px; background-color: #ffffff; border: 2px solid #db7202; border-radius: 5px; color: #db7202; font-weight: 900;">
+  Call Us
+</button>
+
+<!-- Desktop popup container -->
+<div id="desktop-popup" style="display: none; position: absolute; background-color: #ffffff; border: 1px solid #db7202; padding: 10px; border-radius: 5px;">
+  <p>Call us at:</p>
+  <ul>
+    <li><span id="phone-number-1">+919014995909</span></li>
+    <li><span id="phone-number-2">+919515855855</span></li>
+  </ul>
+  <span id="close-popup" style="float: right; cursor: pointer;">×</span>
+</div>
+
              </div>
       <h3>Trip Highlights</h3>
     <div class="highlight-tags">
@@ -700,33 +1214,48 @@ window.addEventListener('scroll', () => {
 
     </div>
     </div>
-
-    <!-- Enquire Now Form Card -->
-    <!-- Enquire Now Form Card -->
-<div class="form-container">
-  <div class="form-card">
-    <h2>Enquire Now</h2>
+    <div class="mobile-form-container">
+      <div class="mobile-form-card">
+        <h2>Enquire Now</h2>
+        <form>
+        <input type="text" id="name1" placeholder="Full Name *" required>
+        <input type="email" id="email1" placeholder="Email *" required>
+        <input type="tel" id="phone1" placeholder="+91 Phone *" required>
+        <input type="text" id="travelDate1" placeholder="Travel Date (dd-mm-yy) *" required>
+        <input type="number" id="travelCount1" placeholder="Travel Count *" required>
+        <textarea id="message1" name="message1" placeholder="Message *" required></textarea>
     
-    <form >
-      <input type="text" id="name" placeholder="Full Name *" required>
-      <input type="email" id="email" placeholder="Email *" required>
-      <input type="tel" id="phone" placeholder="+91 Phone *" required>
-      <input type="text" id="travelDate" placeholder="Travel Date (dd-mm-yy) *" required>
-      <input type="number" id="travelCount" placeholder="Travel Count *" required>
-      <textarea id="message" placeholder="Message *" required></textarea>
-  
-      <button id="btn" type="submit">Send Enquiry</button>
-  </form>
-  </div>
-</div>
+        <button id="btn1" type="submit">Send Enquiry</button>
+      </form>
+      </div>
+    </div>
 
-<script>
-  flatpickr("#travelDate", {
-    dateFormat: "d-m-Y", // Set the format to dd-mm-yy
-    allowInput: true, // Allow manual input
-  });
-</script>
-<script src="js/mail.js"></script>
+    <!-- Enquire Now Form Card -->
+    <!-- Enquire Now Form Card -->
+    <div class="form-container">
+      <div class="form-card">
+        <h2>Enquire Now</h2>
+        <form >
+        <input type="text" id="name" placeholder="Full Name *" required>
+        <input type="email" id="email" placeholder="Email *" required>
+        <input type="tel" id="phone" placeholder="+91 Phone *" required>
+        <input type="text" id="travelDate" placeholder="Travel Date (dd-mm-yy) *" required>
+        <input type="number" id="travelCount" placeholder="Travel Count *" required>
+        <textarea id="message" placeholder="Message *" required></textarea>
+    
+        <button id="btn" type="submit">Send Enquiry</button>
+    </form>
+      </div>
+    </div>
+    
+    <script>
+      flatpickr("#travelDate", {
+        dateFormat: "d-m-Y", // Set the format to dd-mm-yy
+        allowInput: true, // Allow manual input
+      });
+    </script>
+    <script src="js/mail.js"></script>
+
   </div>
 
   <!-- Trip Highlights -->
@@ -903,16 +1432,77 @@ window.addEventListener('scroll', () => {
   </div>
   
 
-    <div id="stay-content" class="dropdown-content" style="display: none;">
-      <!-- Stay content here -->
-      <h4>Stay</h4>
-      <ul>
-        <li>Hotel</li>
-        <li>Villa</li>
-        <li>Resort</li>
-      </ul>
+    
+  </div>
+  <div id="activities-content" class="dropdown-content" style="display: none;">
+    <div class="carousel1">
+      <div class="carousel1-inner">
+        <div class="carousel1-item active">
+          <img src="images/Activities/Bali/Bali-Uluwatu.svg" alt="Uluwatu Temple">
+          <h4>Uluwatu Temple</h4>
+        </div>
+        <div class="carousel1-item">
+          <img src="images/Activities/Bali/Bali-Nusa-Penida.svg" alt="Nusa Penida Exploration">
+          <h4>Nusa Penida Exploration</h4>
+        </div>
+        <div class="carousel1-item">
+          <img src="images/Activities/Bali/Bali-ATV-Adventure.svg" alt="Waterfalls, ATV Adventure, Beach Clubs">
+          <h4>Waterfalls, ATV Adventure, Beach Clubs</h4>
+        </div>
+        <div class="carousel1-item">
+          <img src="images/Activities/Bali/Bali-Ubud.svg" alt="Ubud and Rice Terraces">
+          <h4>Ubud and Rice Terraces</h4>
+        </div>
+        <div class="carousel1-item">
+          <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Mount Batur Sunrise and Tirta Ganga">
+          <h4>Mount Batur Sunrise and Tirta Ganga</h4>
+        </div>
+        <div class="carousel1-item">
+          <img src="images/Activities/Bali/Bali-Garuda-Wisnu-Kencana.svg" alt="Garuda Wisnu Kencana and Departure">
+          <h4>Garuda Wisnu Kencana and Departure</h4>
+        </div>
+      </div>
+      <a class="carousel1-prev" onclick="carousel1PrevClick()">«</a>
+      <a class="carousel1-next" onclick="carousel1NextClick()">»</a>
     </div>
   </div>
+  <div id="stay-content" class="dropdown-content" style="display: none;">
+    <!-- Stay content here -->
+    <h4>Stay</h4>
+    
+    <div class="carousel">
+      <!-- The carousel inner container -->
+      <div class="carousel-inner">
+        <!-- The carousel items -->
+        <div class="carousel-item active">
+          <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Hotel 1">
+        </div>
+        <div class="carousel-item">
+          <img src="images/Activities/Bali/Bali-Garuda-Wisnu-Kencana.svg" alt="Hotel 2">
+        </div>
+        <div class="carousel-item">
+          <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Hotel 3">
+        </div>
+        <!-- Add more carousel items here -->
+      </div>
+      <!-- The carousel navigation -->
+      <a class="carousel-prev" onclick="carouselPrevClick()">«</a>
+      <a class="carousel-next" onclick="carouselNextClick()">»</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="end-trip">
+  <div class="end-trip-star">
+    <i class="fas fa-star" style="font-size: 24px; color: #FFD700;"></i>
+    <i class="fas fa-star" style="font-size: 24px; color: #FFD700;"></i>
+    <i class="fas fa-star" style="font-size: 24px; color: #FFD700;"></i>
+    <i class="fas fa-star" style="font-size: 24px; color: #FFD700;"></i>
+    <i class="fas fa-star" style="font-size: 24px; color: #FFD700;"></i>
+  </div>
+  <p style="font-size: 3em; font-family: 'Brush Script MT', cursive; font-style: cursive; font-weight: lighter; animation: fontSize 2s infinite; color: #de8021;">End of the trip</p>
+</div>
 
   <script>
     function toggleDetails(day) {
@@ -1037,6 +1627,37 @@ function carousel1NextClick() {
   carouselItems[currentIndex].classList.remove('active');
   carouselItems[nextIndex].classList.add('active');
 }
+
+// Get the button and desktop popup elements
+const callUsButton = document.getElementById('call-us-button');
+const desktopPopup = document.getElementById('desktop-popup');
+// Add event listener to the button
+callUsButton.addEventListener('click', () => {
+  // Check if the screen width is greater than 768px (desktop)
+  if (window.innerWidth > 768) {
+    // Show the desktop popup
+    desktopPopup.style.display = 'block';
+  } else {
+    // Redirect to call on mobile devices
+    const phoneNumber1 = document.getElementById('phone-number-1').textContent;
+    const phoneNumber2 = document.getElementById('phone-number-2').textContent;
+    window.location.href = `tel:+919014995909,+919515855855`; // separate phone numbers with a comma
+  }
+});
+// Add event listener to the desktop popup to close it when clicked outside
+document.addEventListener('click', (e) => {
+  if (e.target !== desktopPopup && e.target !== callUsButton) {
+    desktopPopup.style.display = 'none';
+  }
+});
+// Get the close button element
+const closeButton = document.getElementById('close-popup');
+// Add an event listener to the close button
+closeButton.addEventListener('click', function() {
+  // Hide the popup when the close button is clicked
+  document.getElementById('desktop-popup').style.display = 'none';
+});
+
   </script>
   </body>
   </html>

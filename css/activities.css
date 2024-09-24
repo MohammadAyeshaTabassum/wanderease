@@ -49,11 +49,33 @@ body{
     margin-top: 10px;
     color: #db7202;
 }
-.activity-card-text{
+.activity-card-text {
     margin-bottom: 10px;
     font-style: italic;
     font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+.read-more-btn {
+    background-color: transparent;
+    border: none;
+    color: #db7202;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.activity-card-text.expanded {
+    -webkit-line-clamp: unset;
+    display: block;
+}
+
 .contact-acti{
     width: 100%;
     padding: 10px;
