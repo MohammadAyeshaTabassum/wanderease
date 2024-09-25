@@ -11,7 +11,7 @@
     height: 400px;
     position: relative;
     
-    margin-left: 3vmin;
+    margin-left: 6vmin;
     
     margin-bottom: 10vmin;
     border-radius: 1vmin;
@@ -94,5 +94,19 @@
 }
 h6{
     font-weight: 200;
-    font-style: italic;
+    font-style:normal;
 }
+.rating {
+    display: inline-block;
+    padding: 5px; /* adjust padding to keep the star within the package card */
+  }
+  
+  .rating span {
+    display: inline-block;
+  }
+  .rating .fas.fa-star {
+    color: #ffd700;
+  }
+  p{
+    font-size: smaller;
+  }

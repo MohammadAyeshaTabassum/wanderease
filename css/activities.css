@@ -11,7 +11,7 @@ body{
 .main-container{
     margin-top: 30px;
     width: 94%;
-    margin-left: 3%;
+    margin-left: 10%;
     border-radius: 1vmin;
     /* background-color: rgba(250, 235, 215, 0.459); */
     padding: 30px;
@@ -27,7 +27,7 @@ body{
     /* margin: 30px; */
     /* margin-bottom: 0px; */
     background-color: antiquewhite;
-    width: 100%;
+    width: 85%;
     padding: 10px;
     border-radius: 1vmin;
 }

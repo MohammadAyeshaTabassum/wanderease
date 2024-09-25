@@ -1,0 +1,104 @@
+/* Base styles (for larger screens) */
+.carousel-caption {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #e15e08;
+  opacity: 1; /* Set to visible by default */
+  width: 80%;
+  max-width: 1200px;
+
+  /* White text border effect */
+  text-shadow: 
+    1px 1px 0 #ffffff, 
+    -1px -1px 0 #ffffff, 
+    1px -1px 0 #ffffff, 
+    -1px 1px 0 #ffffff;
+}
+
+.carousel-caption h5 {
+  font-size: 4rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem !important;
+  margin-top: 0.5rem;
+  color: #000000 !important;
+  font-weight: 500 !important;
+}
+
+/* Adjust the first video */
+.carousel-item:nth-child(1) video {
+  margin-top: 20px !important; /* Add margin to move it down */
+  height: auto; /* Make sure the height is responsive */
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .carousel-caption {
+    bottom: 5%; /* Reduce bottom position for smaller screens */
+    width: 90%;
+    opacity: 1 !important; /* Ensure full visibility */
+    animation: none; /* Disable animation */
+    color: #ffffff !important; /* Lighten text for contrast */
+  }
+
+  .carousel-caption h5 {
+    font-size: 2.2rem; /* Adjusted font size */
+  }
+
+  .carousel-caption p {
+    font-size: 0.95rem !important; /* Adjusted font size */
+    margin-top: 0.25rem;
+  }
+
+  /* Adjust video sizes */
+  .carousel-item:nth-child(1) video {
+    margin-top: 10px !important; /* Smaller margin for mobile */
+    height: 200px !important; /* Adjust height */
+  }
+  
+  .carousel-item:nth-child(2) video,
+  .carousel-item:nth-child(3) video {
+    height: 200px !important;
+    margin-top: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-caption {
+    bottom: 3%;
+    width: 95%;
+    opacity: 1 !important;
+    animation: none;
+    color: #e15e08 !important; /* Use the same color for consistency */
+  }
+
+  .carousel-caption h5 {
+    font-size: 0.8rem !important; /* Adjusted font size for smaller screens */
+  }
+
+  .carousel-caption p {
+    font-size: 0.45rem !important; /* Adjusted font size */
+    margin-top: 0.2rem;
+  }
+
+  /* Further adjust video sizes */
+  .carousel-item:nth-child(1) video {
+    margin-top: 5px !important; /* Reduce margin for very small screens */
+    height: 100px;
+  }
+
+  .carousel-item:nth-child(2) video,
+  .carousel-item:nth-child(3) video {
+    height: 100px;
+    margin-top: 15px;
+  }
+}
+
+/* Removed the background overlay from carousel-caption */
