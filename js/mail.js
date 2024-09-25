@@ -17,7 +17,7 @@ document.getElementById('btn').addEventListener('click', function (e) {
         message
     };
 
-    fetch('http://localhost:8081/api/send-email', {
+    fetch('https://wandereasebackend.onrender.com/api/send-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -57,7 +57,7 @@ document.getElementById('btn1').addEventListener('click', function (e) {
         message
     };
 
-    fetch('http://localhost:8081/api/send-email', {
+    fetch('https://wandereasebackend.onrender.com/api/send-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
