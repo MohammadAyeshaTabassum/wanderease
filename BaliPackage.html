@@ -178,7 +178,13 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-
+    .form-container select {
+  width: 99%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
     .form-container button {
       width: 100%;
       padding: 10px;
@@ -585,6 +591,13 @@
 
 .mobile-form-container input, .mobile-form-container textarea {
   width: 90%; /* Set width to 90% of the parent container */
+  padding: 5px; /* Decrease padding to 5px */
+  margin: 2px 0; /* Decrease margin to 2px */
+  height: 25px; /* Set a fixed height for the inputs */
+  border-radius: 5px; /* Add a 5px border radius to round the corners */
+}
+.mobile-form-container select {
+  width: 95%; /* Set width to 90% of the parent container */
   padding: 5px; /* Decrease padding to 5px */
   margin: 2px 0; /* Decrease margin to 2px */
   height: 25px; /* Set a fixed height for the inputs */
@@ -1162,6 +1175,18 @@ window.addEventListener('scroll', () => {
         <input type="text" id="name1" placeholder="Full Name *" required>
         <input type="email" id="email1" placeholder="Email *" required>
         <input type="tel" id="phone1" placeholder="+91 Phone *" required>
+        <select id="travelDestination1" required>
+          <option value="">Select Travel Destination *</option>
+          <option value="Azerbaijan">Azerbaijan</option>
+          <option value="Bali">Bali</option>
+          <option value="Dubai">Dubai</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Srilanka">Srilanka</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Vietnam">Vietnam</option>
+          <option value="Other">Other (please specify in message)</option>
+      </select>
         <input type="text" id="travelDate1" placeholder="Travel Date (dd-mm-yy) *" required>
         <input type="number" id="travelCount1" placeholder="Travel Count *" required>
         <textarea id="message1" name="message1" placeholder="Message *" required></textarea>
@@ -1179,6 +1204,18 @@ window.addEventListener('scroll', () => {
         <input type="text" id="name" placeholder="Full Name *" required>
         <input type="email" id="email" placeholder="Email *" required>
         <input type="tel" id="phone" placeholder="+91 Phone *" required>
+        <select id="travelDestination1" required>
+          <option value="">Select Travel Destination *</option>
+          <option value="Azerbaijan">Azerbaijan</option>
+          <option value="Bali">Bali</option>
+          <option value="Dubai">Dubai</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Srilanka">Srilanka</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Vietnam">Vietnam</option>
+          <option value="Other">Other (please specify in message)</option>
+      </select>
         <input type="text" id="travelDate" placeholder="Travel Date (dd-mm-yy) *" required>
         <input type="number" id="travelCount" placeholder="Travel Count *" required>
         <textarea id="message" placeholder="Message *" required></textarea>
