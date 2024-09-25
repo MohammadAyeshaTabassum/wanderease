@@ -636,23 +636,23 @@ data-mdb-ride="carousel"
 
                 <div class="col-md-7">
 
-                    <form action="https://api.web3forms.com/submit" method="POST">
-                      <input type="hidden" name="access_key" value="4ba35cc8-1568-4c01-a3f4-6aa5b4eee1b5">
+                    <form>
+                      <!-- <input type="hidden" name="access_key" value="4ba35cc8-1568-4c01-a3f4-6aa5b4eee1b5"> -->
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="text" name="name" class="form-control" placeholder="Name">
+                                <input type="text"  id="name" name="name" class="form-control" placeholder="Name">
                             </div>
                             <div class="col-sm-6">
-                                <input type="email" name="email" class="form-control" placeholder="Email">
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Email">
                             </div>
                             <div class="col-sm-12">
-                              <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
+                              <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone Number">
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" id="comment" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="message" rows="5" id="message" placeholder="Message"></textarea>
                         </div>
-                        <button class="btn btn-block" type="submit">Send Now!</button>
+                        <button id="btn2" class="btn btn-block" type="submit">Send Now!</button>
                     </form>
                 </div>
             </div>
