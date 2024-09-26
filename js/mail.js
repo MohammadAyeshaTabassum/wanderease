@@ -16,7 +16,7 @@ document.getElementById('btn').addEventListener('click', function (e) {
         travelCount,
         message
     };
-
+    // https://wandereasebackend.onrender.com
     fetch('https://wandereasebackend.onrender.com/api/send-email', {
         method: 'POST',
         headers: {
