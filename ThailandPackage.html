@@ -1674,8 +1674,20 @@ function toggleItinerary() {
   activitiesContent.style.display = 'none';
   stayContent.style.display = 'none';
   document.getElementById('itinerary-button').classList.add('active');
-  document.getElementById('activities-button').classList.remove('active');
   document.getElementById('stay-button').classList.remove('active');
+}
+
+
+
+function toggleStay() {
+  const itineraryContent = document.getElementById('itinerary-content');
+  const activitiesContent = document.getElementById('activities-content');
+  const stayContent = document.getElementById('stay-content');
+  itineraryContent.style.display = 'none';
+  activitiesContent.style.display = 'none';
+  stayContent.style.display = 'block';
+  document.getElementById('itinerary-button').classList.remove('active');
+  document.getElementById('stay-button').classList.add('active');
 }
 
 function toggleActivities() {
@@ -1690,17 +1702,7 @@ function toggleActivities() {
   document.getElementById('stay-button').classList.remove('active');
 }
 
-function toggleStay() {
-  const itineraryContent = document.getElementById('itinerary-content');
-  const activitiesContent = document.getElementById('activities-content');
-  const stayContent = document.getElementById('stay-content');
-  itineraryContent.style.display = 'none';
-  activitiesContent.style.display = 'none';
-  stayContent.style.display = 'block';
-  document.getElementById('itinerary-button').classList.remove('active');
-  document.getElementById('activities-button').classList.remove('active');
-  document.getElementById('stay-button').classList.add('active');
-}
+
 // Get the carousel elements
 const carousel = document.querySelector('.carousel');
   const carouselInner = document.querySelector('.carousel-inner');
