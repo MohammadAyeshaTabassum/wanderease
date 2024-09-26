@@ -12,5 +12,11 @@
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
+    font-size:medium;
+    background-color:  #ffe8ca;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box h4{
+    font-weight: 500;
 }

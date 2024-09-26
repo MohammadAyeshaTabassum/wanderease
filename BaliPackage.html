@@ -494,11 +494,27 @@
 }
 
 .carousel-prev {
-  left: 0; /* Change this to 0 to make the button visible */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  left: 40px; /* Highlighted */
+  background-color:  #eea136; /* Added background color to make it more visible */
+  padding: 10px; /* Added padding to make it more visible */
 }
 
 .carousel-next {
-  right: 680px; /* Change this to 0 to make the button visible */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  right: 645px; /* Highlighted */
+  background-color: #eea136;/* Added background color to make it more visible */
+  padding: 10px; /* Added padding to make it more visible */
 }
 .carousel-item img {
   background-color: transparent;
@@ -924,16 +940,33 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 24px;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     cursor: pointer;
   }
   .carousel-prev {
-    left: 0;
-  }
-  .carousel-next {
-    right: 0;
-  }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  left: 0; /* Highlighted */
+  background-color: #eea136;/* Added background color to make it more visible */
+  padding: 10px; /* Added padding to make it more visible */
+}
+
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  right: 0; /* Highlighted */
+  background-color:#eea136; /* Added background color to make it more visible */
+  padding: 10px; /* Added padding to make it more visible */
+}
 }
 @media only screen and (max-width: 480px) {
   .carousel1 {
@@ -960,7 +993,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 24px;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     cursor: pointer;
   }
@@ -1044,8 +1077,94 @@
   font-weight: lighter;
   animation: fontSize 2s infinite;
 }
+.carousel-item {
+  display: none;
+}
+
+.carousel-item.active {
+  display: block;
+}
+.carousel2 {
+  position: relative;
+}
+
+.carousel2-prev, .carousel2-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
 
 
+/* Highlighted classes */
+.carousel2-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  left: -13px; /* Highlighted */
+  background-color: #eea136; /* Added background color to make it more visible */
+  padding: 10px; /* Added padding to make it more visible */
+}
+
+.carousel2-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  right:410px; /* Highlighted */
+  background-color: #eea136; /* Added background color to make it more visible */
+  padding: 10px; /* Added padding to make it more visible */
+}
+
+
+.carousel2-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel2-item {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel2-item.active {
+  display: block;
+}
+
+.carousel2-item img {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  margin-left:-20px;
+}
+/* Mobile media query */
+@media only screen and (max-width: 768px) {
+  .carousel2-prev {
+    left: 7px;
+    font-size: 18px;
+  }
+
+  .carousel2-next {
+    right: 7px;
+    font-size: 18px;
+  }
+
+  .carousel2-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 0;
+  }
+}
   </style>
   <!-- Include flatpickr CSS and JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -1187,7 +1306,7 @@ window.addEventListener('scroll', () => {
           <option value="Vietnam">Vietnam</option>
           <option value="Other">Other (please specify in message)</option>
       </select>
-        <input type="text" id="travelDate1" placeholder="Travel Date (dd-mm-yy) *" required>
+        <input type="text" id="travelDate" placeholder="Travel Date (dd-mm-yy) *" required>
         <input type="number" id="travelCount1" placeholder="Travel Count *" required>
         <textarea id="message1" name="message1" placeholder="Message *" required></textarea>
     
@@ -1255,26 +1374,32 @@ window.addEventListener('scroll', () => {
 </nav>
   <div id="itinerary-content">
     <!-- The carousel container -->
-<div class="carousel">
-  <!-- The carousel inner container -->
-  <div class="carousel-inner">
-    <!-- The carousel items -->
-    <div class="carousel-item active">
-      <img src="images/Activities/Bali/Bali-ATV-Adventure.svg" alt="Image 1">
-    </div>
-    <div class="carousel-item">
-      <img src="images/Activities/Bali/Bali-Garuda-Wisnu-Kencana.svg" alt="Image 2">
-    </div>
-    <div class="carousel-item">
-      <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Image 3">
-    </div>
-    <!-- Add more carousel items here -->
-  </div>
-  <!-- The carousel navigation -->
-  <!-- The carousel navigation -->
-  <a class="carousel-prev" onclick="carouselPrevClick()">«</a>
-  <a class="carousel-next" onclick="carouselNextClick()">»</a>
-</div>
+      <div class="carousel2">
+        <!-- The carousel inner container -->
+        <div class="carousel2-inner">
+          <!-- The carousel items -->
+          <div class="carousel2-item active">
+            <img src="images/Activities/Bali/Bali-ATV-Adventure.svg" alt="Image 1">
+          </div>
+          <div class="carousel2-item">
+            <img src="images/Activities/Bali/Bali-Ubud.svg" alt="Image 2">
+          </div>
+          <div class="carousel2-item">
+            <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Image 3">
+          </div>
+          <div class="carousel2-item">
+            <img src="images/Activities/Bali/Bali-Nusa-Penida.svg" alt="Image 4">
+          </div>
+          <div class="carousel2-item">
+            <img src="images/Activities/Bali/Bali-Tirta-Ganga.svg" alt="Image 5">
+          </div>
+          <!-- Add more carousel items here -->
+        </div>
+        <!-- The carousel navigation -->
+        <a class="carousel2-prev" onclick="carousel2PrevClick()">«</a>
+        <a class="carousel2-next" onclick="carousel2NextClick()">»</a>
+      </div>
+ 
     <div class="dropdown-container">
       <button class="dropdown-button1" onclick="toggleDetails('day1')"><span class="day-tag">Day 1</span>: Arrival and Uluwatu Temple</button>
       <div id="day1-details" class="dropdown-content">
@@ -1460,7 +1585,7 @@ known for their stunning green landscapes and traditional rice farming technique
       <div class="carousel1">
         <div class="carousel1-inner">
           <div class="carousel1-item active">
-            <img src="images/Activities/Bali/Bali-Uluwatu.svg" alt="Uluwatu Temple">
+            <img src="images/Activities/Bali/Bali-Uluwatu.svg" alt="Uluwatu Temple" >
             <h4>Uluwatu Temple</h4>
           </div>
           <div class="carousel1-item">
@@ -1503,7 +1628,7 @@ known for their stunning green landscapes and traditional rice farming technique
             <img src="images/Activities/Bali/Bali-Garuda-Wisnu-Kencana.svg" alt="Hotel 2">
           </div>
           <div class="carousel-item">
-            <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Hotel 3">
+            <img src="images/Activities/Bali/Bali-Nusa-Penida.svg" alt="Hotel 3">
           </div>
           <!-- Add more carousel items here -->
         </div>
@@ -1669,7 +1794,60 @@ closeButton.addEventListener('click', function() {
   // Hide the popup when the close button is clicked
   document.getElementById('desktop-popup').style.display = 'none';
 });
+// Get the carousel elements
+const carousel2 = document.querySelector('.carousel2');
+const carousel2Inner = document.querySelector('.carousel2-inner');
+const carousel2Items = document.querySelectorAll('.carousel2-item');
+const carousel2Prev = document.querySelector('.carousel2-prev');
+const carousel2Next = document.querySelector('.carousel2-next');
 
+// Set the current slide index
+let currentIndex2 = 0;
+
+// Event listeners for the navigation buttons
+carousel2Prev.addEventListener('click', carousel2PrevClick);
+carousel2Next.addEventListener('click', carousel2NextClick);
+
+// Function to handle the previous button click
+function carousel2PrevClick() {
+  if (currentIndex2 === 0) {
+    currentIndex2 = carousel2Items.length - 1;
+  } else {
+    currentIndex2--;
+  }
+  updateCarousel2();
+}
+
+// Function to handle the next button click
+function carousel2NextClick() {
+  if (currentIndex2 === carousel2Items.length - 1) {
+    currentIndex2 = 0;
+  } else {
+    currentIndex2++;
+  }
+  updateCarousel2();
+}
+
+// Update the carousel
+function updateCarousel2() {
+  // Remove the active class from all carousel items
+  carousel2Items.forEach((item) => item.classList.remove('active'));
+
+  // Add the active class to the current carousel item
+  carousel2Items[currentIndex2].classList.add('active');
+
+  // Update the display property of the carousel items
+  carousel2Items.forEach((item, index) => {
+    if (index === currentIndex2) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+// Initialize the carousel
+updateCarousel2();
   </script>
   </body>
   </html>
