@@ -667,7 +667,7 @@
   background-color: #fff; /* Add a background color to the form container */
   border: 1px solid #ddd; /* Add a border to the form container */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow to the form container */
-  height: 350px; /* Set a fixed height for the container */
+  height: 380px !important; /* Set a fixed height for the container */
   margin-left: -10px; /* Set margin-left to -20px to move it more to the left */
 }
 .mobile-form-container input, .mobile-form-container textarea {
@@ -892,25 +892,30 @@
 }
 @media only screen and (max-width: 480px) {
   .dropdown-container {
-    margin: 0px;
+    margin: 15px;
     width: 100%;
+    margin-left: -0.5px;
   }
+
   .dropdown-content {
     width: 100%;
     padding: 10px;
     border: 1px solid #db7202;
     border-radius: 5px;
   }
+
   .dropdown-content ul {
     list-style-type: none;
     padding: 0;
   }
+
   .dropdown-content ul li {
-    margin: 5px 0;
+    margin: 10px 0; /* Increased margin between lines */
     padding: 8px;
     border-bottom: 1px solid #e2e2e2;
   }
 }
+
 @media only screen and (max-width: 480px) {
   .end-trip {
     text-align: center;
@@ -1126,11 +1131,11 @@
 }
 
 .end-trip {
-  font-size: 3em;
+  font-size: 1em;
   font-family: 'Brush Script MT', cursive;
   font-style: cursive;
   font-weight: lighter;
-  animation: fontSize 2s infinite;
+  
 }
 
 .carousel2 {
@@ -1655,7 +1660,7 @@ window.addEventListener('scroll', () => {
     <i class="fas fa-star" style="font-size: 24px; color: #FFD700;"></i>
     <i class="fas fa-star" style="font-size: 24px; color: #FFD700;"></i>
   </div>
-  <p style="font-size: 3em; font-family: 'Brush Script MT', cursive; font-style: cursive; font-weight: lighter; animation: fontSize 2s infinite; color: #de8021;">End of the trip</p>
+  <p style="font-size: 3em; font-family: 'Brush Script MT', cursive; font-style: cursive; font-weight: lighter; color: #de8021;">End of the trip</p>
 </div>
 
 

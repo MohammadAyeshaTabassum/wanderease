@@ -94,6 +94,31 @@
     padding: 0 20px;
   }
   .nav-btn {
-    display: none;
+    display: block; /* Display the nav buttons in mobile view */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .swiper-button-prev {
+    left: 10px;
+  }
+  .swiper-button-next {
+    right: 10px;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .swiper-button-prev::after {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .swiper-button-next::after {
+    right: 50%;
+    transform: translate(50%, -50%);
   }
 }

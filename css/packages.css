@@ -110,3 +110,13 @@ h6{
   p{
     font-size: smaller;
   }
+  /* Mobile media query */
+@media only screen and (max-width: 768px) {
+    .travel-container {
+      justify-content: center; /* Center the packages horizontally */
+    }
+    .travel-container .package1 {
+      margin-left: 0; /* Remove the left margin */
+      margin-right: auto; /* Add right margin to center the package */
+    }
+  }
