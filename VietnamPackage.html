@@ -1130,7 +1130,7 @@
   }
 }
 .end-trip {
-  font-size: 3em;
+  font-size: 1em;
   font-family: 'Brush Script MT', cursive;
   font-style: cursive;
   font-weight: lighter;
@@ -1217,7 +1217,54 @@
     margin-left: 0;
   }
 }
+.description-card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
 
+.description-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.description-card p {
+  font-size: 14px;
+  font-weight: 300px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.description-card h4::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #333;
+  display: block;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .description-card {
+    width:96.5%;
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .description-card h4 {
+    font-size: 16px;
+  }
+
+  .description-card p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
   </style>
   <!-- Include flatpickr CSS and JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -1343,6 +1390,14 @@ window.addEventListener('scroll', () => {
       <div class="h11">Ho Chi Minh City Tour & Cu Chi Tunnels</div>
       <div class="h11">Mekong Delta Tour</div>
 
+    </div>
+    <div class="description-card">
+      <h4>Trip Description</h4>
+      <p>Embark on a dual adventure through Vietnam and Thailand with WanderEase India! Explore 
+        Vietnam's stunning landscapes, rich history, and vibrant cities, then dive into Thailand’s 
+        exotic beaches, bustling markets, and cultural wonders for an unforgettable Southeast Asian 
+        journey.
+        </p>
     </div>
     </div>
     <div class="mobile-form-container">
