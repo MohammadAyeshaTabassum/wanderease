@@ -233,7 +233,7 @@
   margin: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: bold;
   color: #333;
   cursor: pointer;
@@ -537,24 +537,71 @@
     position: absolute !important; /* Override default positioning */
     left: 720px !important; /* Adjust this value to move the calendar left */
   }
-  #activities-content {
+ 
+#activities-content {
   position: relative;
-  width: 61%; /* Decrease the width to 70% */
-  left: -30px; /* Move the container to the very left */
-  padding: 0; /* Remove any default padding */
-  margin: 0; /* Remove any default margin */
-  margin-top: 30px;
+  width: 55%;
+  left: -22px;
+  padding: 28px;
+  margin: 0;
+  margin-top: 20px;
+}
+.carousel3 {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Ensures that no part of the other images are visible */
+}
+.carousel3-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition between slides */
+  width: 100%; /* Ensure the inner container takes the full width */
+}
+.carousel3-item {
+  flex: 0 0 100%; /* Each item takes full width of the container */
+  max-width: 100%; /* Prevent items from overflowing */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel3-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.carousel3-item h4 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.carousel3-prev, .carousel3-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+.carousel3-prev {
+  left: 20px;
+}
+.carousel3-next {
+  right: 20px;
 }
 
 
-  .carousel1 {
+.carousel1 {
   position: relative;
   width: 60%; /* Decrease the width to 50% */
   height: 300px;
   margin: 40px 0; /* Remove auto margin and set 0 margin on the left */
   left: 20px; /* Move the carousel to the very left */
 }
-
 .carousel1-inner {
   position: relative;
   width: 100%;
@@ -562,24 +609,20 @@
   overflow: hidden;
   padding: 0; /* Remove padding to ensure the carousel items are aligned to the left */
 }
-
 .carousel1-item {
   position: relative;
   display: none;
   width: 120%;
   height: 100%;
 }
-
 .carousel1-item.active {
   display: block;
 }
-
 .carousel1-item img {
   width: 1900px;
   height: 100%;
   object-fit: cover;
 }
-
 .carousel1-item h4 {
   position: absolute;
   bottom: 0;
@@ -590,7 +633,6 @@
   padding: 10px;
   text-align: center;
 }
-
 .carousel1-prev, .carousel1-next {
   position: absolute;
   top: 50%;
@@ -600,11 +642,9 @@
   text-decoration: none;
   cursor: pointer;
 }
-
 .carousel1-prev {
   left: 0;
 }
-
 .carousel1-next {
   right: 0;
 }
@@ -1217,12 +1257,13 @@
     margin-left: 0;
   }
 }
+
 .description-card {
-  background-color: #ffffff;
+  background: linear-gradient(145deg, #ffdab9, #f5a742, #ff4500); /* Smooth transition from light to dark orange */
   padding: 20px;
   margin-top: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   border: 1px solid #ddd;
 }
 
@@ -1232,14 +1273,12 @@
   font-weight: 600;
   color: #333;
 }
-
 .description-card p {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 300px;
   margin-bottom: 20px;
-  color: #666;
+  color: #000000;
 }
-
 .description-card h4::before {
   content: "";
   width: 40px;
@@ -1248,6 +1287,7 @@
   display: block;
   margin-bottom: 10px;
 }
+
 
 @media only screen and (max-width: 768px) {
   .description-card {
@@ -1265,6 +1305,36 @@
     font-weight: 500;
   }
 }
+
+/* General Mobile Styles */
+@media only screen and (max-width: 768px) {
+  
+  #activities-content {
+    width: 100%; /* Use full width for smaller screens */
+    padding: 15px; /* Reduce padding */
+    margin-top: 0; /* Remove extra margin */
+  }
+  .carousel3-item {
+    padding: 10px; /* Reduce padding inside carousel items */
+  }
+  .carousel3-item img {
+    height: 180px; /* Reduce image height for smaller screens */
+  }
+  .carousel3-item h4 {
+    font-size: 16px; /* Reduce heading font size */
+  }
+  .carousel3-prev, .carousel3-next {
+    font-size: 20px; /* Reduce button size */
+    padding: 8px; /* Reduce padding for buttons */
+  }
+  .carousel3-prev {
+    left: 10px; /* Adjust for smaller screen */
+  }
+  .carousel3-next {
+    right: 10px; /* Adjust for smaller screen */
+  }
+}
+
   </style>
   <!-- Include flatpickr CSS and JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -1475,16 +1545,26 @@ window.addEventListener('scroll', () => {
     
   <div class="itinerary">
     <nav class="nav-bar">
-    <div class="button-container">
-      <button class="dropdown-button active" id="itinerary-button" onclick="toggleItinerary()">
-        <i class="fas fa-calendar-alt"></i> Itinerary
-      </button>
-      
-      <button class="dropdown-button" id="stay-button" onclick="toggleStay()">
-        <i class="fas fa-bed"></i> Stay
-      </button>
-      
-  </div>
+    
+<div class="button-container">
+  <button class="dropdown-button active" id="itinerary-button" onclick="toggleItinerary()">
+    <i class="fas fa-calendar-alt"></i> Itinerary
+  </button>
+  
+  <button class="dropdown-button" id="stay-button" onclick="toggleStay()">
+    <i class="fas fa-bed"></i> Stay
+  </button>
+  
+  <button class="dropdown-button" id="activities-button" onclick="toggleActivities()">
+    <i class="fas fa-umbrella-beach"></i> Activities
+  </button>
+</div>
+
+
+
+
+
+
 </nav>
   <div id="itinerary-content">
     <!-- The carousel container -->
@@ -1649,64 +1729,64 @@ window.addEventListener('scroll', () => {
 
     
   </div>
-  <div id="activities-content" class="dropdown-content" style="display: none;">
-    <div class="carousel1">
-      <div class="carousel1-inner">
-        <div class="carousel1-item active">
-          <img src="images/Activities/Bali/Bali-Uluwatu.svg" alt="Uluwatu Temple">
-          <h4>Uluwatu Temple</h4>
-        </div>
-        <div class="carousel1-item">
-          <img src="images/Activities/Bali/Bali-Nusa-Penida.svg" alt="Nusa Penida Exploration">
-          <h4>Nusa Penida Exploration</h4>
-        </div>
-        <div class="carousel1-item">
-          <img src="images/Activities/Bali/Bali-ATV-Adventure.svg" alt="Waterfalls, ATV Adventure, Beach Clubs">
-          <h4>Waterfalls, ATV Adventure, Beach Clubs</h4>
-        </div>
-        <div class="carousel1-item">
-          <img src="images/Activities/Bali/Bali-Ubud.svg" alt="Ubud and Rice Terraces">
-          <h4>Ubud and Rice Terraces</h4>
-        </div>
-        <div class="carousel1-item">
-          <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Mount Batur Sunrise and Tirta Ganga">
-          <h4>Mount Batur Sunrise and Tirta Ganga</h4>
-        </div>
-        <div class="carousel1-item">
-          <img src="images/Activities/Bali/Bali-Garuda-Wisnu-Kencana.svg" alt="Garuda Wisnu Kencana and Departure">
-          <h4>Garuda Wisnu Kencana and Departure</h4>
-        </div>
+  
+<div id="activities-content" class="dropdown-content" style="display: none;">
+  <div class="carousel3">
+    <div class="carousel3-inner">
+      <div class="carousel3-item active">
+        <img src="images/Activities/Bali/Bali-Uluwatu.svg" alt="Uluwatu Temple">
+        <h4>Uluwatu Temple</h4>
       </div>
-      <a class="carousel1-prev" onclick="carousel1PrevClick()">«</a>
-      <a class="carousel1-next" onclick="carousel1NextClick()">»</a>
-    </div>
-  </div>
-  <div id="stay-content" class="dropdown-content" style="display: none;">
-    <!-- Stay content here -->
-    <h4>Stay</h4>
-    
-    <div class="carousel">
-      <!-- The carousel inner container -->
-      <div class="carousel-inner">
-        <!-- The carousel items -->
-        <div class="carousel-item active">
-          <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Hotel 1">
-        </div>
-        <div class="carousel-item">
-          <img src="images/Activities/Bali/Bali-Garuda-Wisnu-Kencana.svg" alt="Hotel 2">
-        </div>
-        <div class="carousel-item">
-          <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Hotel 3">
-        </div>
-        <!-- Add more carousel items here -->
+      <div class="carousel3-item">
+        <img src="images/Activities/Bali/Bali-Nusa-Penida.svg" alt="Nusa Penida Exploration">
+        <h4>Nusa Penida Exploration</h4>
       </div>
-      <!-- The carousel navigation -->
-      <a class="carousel-prev" onclick="carouselPrevClick()">«</a>
-      <a class="carousel-next" onclick="carouselNextClick()">»</a>
+      <div class="carousel3-item">
+        <img src="images/Activities/Bali/Bali-ATV-Adventure.svg" alt="Waterfalls, ATV Adventure, Beach Clubs">
+        <h4>Waterfalls, ATV Adventure, Beach Clubs</h4>
+      </div>
+      <div class="carousel3-item">
+        <img src="images/Activities/Bali/Bali-Ubud.svg" alt="Ubud and Rice Terraces">
+        <h4>Ubud and Rice Terraces</h4>
+      </div>
+      <div class="carousel3-item">
+        <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Mount Batur Sunrise and Tirta Ganga">
+        <h4>Mount Batur Sunrise and Tirta Ganga</h4>
+      </div>
+      <div class="carousel3-item">
+        <img src="images/Activities/Bali/Bali-Garuda-Wisnu-Kencana.svg" alt="Garuda Wisnu Kencana and Departure">
+        <h4>Garuda Wisnu Kencana and Departure</h4>
+      </div>
     </div>
+    <a class="carousel3-prev" onclick="carousel3PrevClick()">«</a>
+    <a class="carousel3-next" onclick="carousel3NextClick()">»</a>
   </div>
 </div>
-
+<div id="stay-content" class="dropdown-content" style="display: none;">
+  <!-- Stay content here -->
+  <h4>Stay</h4>
+  
+  <div class="carousel">
+    <!-- The carousel inner container -->
+    <div class="carousel-inner">
+      <!-- The carousel items -->
+      <div class="carousel-item active">
+        <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Hotel 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/Activities/Bali/Bali-Garuda-Wisnu-Kencana.svg" alt="Hotel 2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/Activities/Bali/Bali-Mount-Batur.svg" alt="Hotel 3">
+      </div>
+      <!-- Add more carousel items here -->
+    </div>
+    <!-- The carousel navigation -->
+    <a class="carousel-prev" onclick="carouselPrevClick()">«</a>
+    <a class="carousel-next" onclick="carouselNextClick()">»</a>
+  </div>
+</div>
+</div>
 
 <div class="end-trip">
   <div class="end-trip-star">
@@ -1761,6 +1841,9 @@ function toggleStay() {
   stayContent.style.display = 'block';
   document.getElementById('itinerary-button').classList.remove('active');
   document.getElementById('stay-button').classList.add('active');
+  
+  document.getElementById('activities-button').classList.remove('active');
+
 }
 
 function toggleActivities() {
@@ -1928,6 +2011,34 @@ function updateCarousel2() {
 
 // Initialize the carousel
 updateCarousel2();
+
+let carousel3Index = 0;
+function carousel3PrevClick() {
+  carousel3Index--;
+  if (carousel3Index < 0) {
+    carousel3Index = 5; // adjust the index to the last item
+  }
+  updateCarousel3();
+}
+function carousel3NextClick() {
+  carousel3Index++;
+  if (carousel3Index > 5) {
+    carousel3Index = 0; // adjust the index to the first item
+  }
+  updateCarousel3();
+}
+function updateCarousel3() {
+  const carousel3Items = document.querySelectorAll('.carousel3-item');
+  carousel3Items.forEach((item, index) => {
+    item.classList.remove('active');
+    if (index === carousel3Index) {
+      item.classList.add('active');
+    }
+  });
+  const carousel3Inner = document.querySelector('.carousel3-inner');
+  carousel3Inner.style.transform = `translateX(${carousel3Index * -100}%)`;
+}
+
   </script>
   </body>
   </html>
