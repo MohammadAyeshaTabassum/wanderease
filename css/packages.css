@@ -11,8 +11,8 @@
     height: 400px;
     position: relative;
     
-    margin-left: 6vmin;
-    
+    margin-left: auto; /* Move the package cards to the right */
+    margin-right: 9vmin !important; /* Add some space between the right edge and the package cards */
     margin-bottom: 10vmin;
     border-radius: 1vmin;
 }
