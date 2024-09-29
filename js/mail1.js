@@ -14,7 +14,7 @@ document.getElementById('btn2').addEventListener('click', function (e) {
     };
     // https://wandereasebackend.onrender.com
     // http://localhost:8081
-    fetch('https://wandereasebackend.onrender.com/api/send-email', {
+    fetch('https://wandereasebackend.onrender.com/api/send-email1', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

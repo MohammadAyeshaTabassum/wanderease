@@ -1,13 +1,17 @@
-document.getElementById('btn').addEventListener('click', function (e) {
-    e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const travelDestination = document.getElementById('travelDestination').value;
-    const travelDate = document.getElementById('travelDate').value;
-    const travelCount = document.getElementById('travelCount').value;
-    const message = document.getElementById('message').value;
+document.getElementById('btn1').addEventListener('click', function (e) {
+    e.preventDefault();
+  
+    const name = document.getElementById('name1').value;
+    const email = document.getElementById('email1').value;
+    const phone = document.getElementById('phone1').value;
+    const travelDestination = document.getElementById('travelDestination1').value;
+    const travelDate = document.getElementById('travelDate1').value;
+    const travelCount = document.getElementById('travelCount1').value;
+
+
+    
+    const message = document.getElementById('message1').value;
 
     const data = {
         name,
@@ -18,7 +22,7 @@ document.getElementById('btn').addEventListener('click', function (e) {
         travelCount,
         message
     };
-    // https://wandereasebackend.onrender.com
+
     fetch('https://wandereasebackend.onrender.com/api/send-email', {
         method: 'POST',
         headers: {
@@ -35,4 +39,3 @@ document.getElementById('btn').addEventListener('click', function (e) {
         alert('Failed to send email.');
     });
 });
-
