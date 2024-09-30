@@ -2008,13 +2008,7 @@ callUsButton.addEventListener('click', () => {
     desktopPopup.style.display = 'block';
   } else {
     // Redirect to call on mobile devices
-    const phoneNumber1 = document.getElementById('phone-number-1').textContent;
-    const phoneNumber2 = document.getElementById('phone-number-2').textContent;
-    const prompt = `Call 9014995909 or 9515855855?`;
-    if (confirm(prompt)) {
-      const chosenNumber = prompt.indexOf(phoneNumber1) === 0 ? phoneNumber1 : phoneNumber2;
-      window.open(`tel:+${chosenNumber.replace(/\s+/g, '')}`, '_self');
-    }
+    window.open(`tel:+919014995909`, '_self');
   }
 });
 // Add event listener to the desktop popup to close it when clicked outside
