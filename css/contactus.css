@@ -122,3 +122,38 @@
     display: none;
   }
 }
+.desktop-popup {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #db7202;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px; /* adjust the width as needed */
+  }
+  
+  .desktop-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .desktop-popup ul li {
+    margin-right: 20px;
+  }
+  
+  .desktop-popup ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .desktop-popup .close-popup {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .desktop-popup p {
+    margin-top: 0px;
+  }

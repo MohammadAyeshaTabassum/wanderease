@@ -1899,7 +1899,6 @@ function carousel1NextClick() {
   carouselItems[currentIndex].classList.remove('active');
   carouselItems[nextIndex].classList.add('active');
 }
-
 // Get the button and desktop popup elements
 const callUsButton = document.getElementById('call-us-button');
 const desktopPopup = document.getElementById('desktop-popup');
@@ -1911,9 +1910,7 @@ callUsButton.addEventListener('click', () => {
     desktopPopup.style.display = 'block';
   } else {
     // Redirect to call on mobile devices
-    const phoneNumber1 = document.getElementById('phone-number-1').textContent;
-    const phoneNumber2 = document.getElementById('phone-number-2').textContent;
-    window.location.href = `tel:+919014995909,+919515855855`; // separate phone numbers with a comma
+    window.open(`tel:+919014995909`, '_self');
   }
 });
 // Add event listener to the desktop popup to close it when clicked outside

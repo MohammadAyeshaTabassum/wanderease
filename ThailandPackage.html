@@ -1916,7 +1916,6 @@ function carousel1NextClick() {
 // Get the button and desktop popup elements
 const callUsButton = document.getElementById('call-us-button');
 const desktopPopup = document.getElementById('desktop-popup');
-
 // Add event listener to the button
 callUsButton.addEventListener('click', () => {
   // Check if the screen width is greater than 768px (desktop)
@@ -1925,12 +1924,9 @@ callUsButton.addEventListener('click', () => {
     desktopPopup.style.display = 'block';
   } else {
     // Redirect to call on mobile devices
-    const phoneNumber1 = document.getElementById('phone-number-1').textContent;
-    const phoneNumber2 = document.getElementById('phone-number-2').textContent;
-    window.location.href = `tel:+919014995909,+919515855855`; // separate phone numbers with a comma
+    window.open(`tel:+919014995909`, '_self');
   }
 });
-
 // Add event listener to the desktop popup to close it when clicked outside
 document.addEventListener('click', (e) => {
   if (e.target !== desktopPopup && e.target !== callUsButton) {
@@ -1939,7 +1935,6 @@ document.addEventListener('click', (e) => {
 });
 // Get the close button element
 const closeButton = document.getElementById('close-popup');
-
 // Add an event listener to the close button
 closeButton.addEventListener('click', function() {
   // Hide the popup when the close button is clicked
