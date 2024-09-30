@@ -2011,7 +2011,7 @@ callUsButton.addEventListener('click', () => {
     // Redirect to call on mobile devices
     const phoneNumber1 = document.getElementById('phone-number-1').textContent;
     const phoneNumber2 = document.getElementById('phone-number-2').textContent;
-    window.location.href = `tel:+919014995909,+919515855855`; // separate phone numbers with a comma
+    window.open(`tel:+919014995909`, '_self'); // separate phone numbers with a comma
   }
 });
 // Add event listener to the desktop popup to close it when clicked outside
