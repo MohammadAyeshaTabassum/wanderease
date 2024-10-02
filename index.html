@@ -71,102 +71,59 @@
     </nav>
     <div  id="home" >
       
-    <!-- Carousel wrapper -->
+<!-- Carousel wrapper -->
 <div
-id="carouselVideoExample"
-data-mdb-carousel-init class="carousel slide carousel-fade"
-data-mdb-ride="carousel"
+  id="carouselVideoExample"
+  class="carousel slide carousel-fade"
 >
-<!-- Indicators -->
-<div class="carousel-indicators">
-  <button data-mdb-button-init
-    type="button"
-    data-mdb-target="#carouselVideoExample"
-    data-mdb-slide-to="0"
-    class="active"
-    aria-current="true"
-    aria-label="Slide 1"
-  ></button>
-  <button data-mdb-button-init
-    type="button"
-    data-mdb-target="#carouselVideoExample"
-    data-mdb-slide-to="1"
-    aria-label="Slide 2"
-  ></button>
-  <button data-mdb-button-init
-    type="button"
-    data-mdb-target="#carouselVideoExample"
-    data-mdb-slide-to="2"
-    aria-label="Slide 3"
-  ></button>
-</div>
-
-<!-- Inner -->
-<div class="carousel-inner">
-  <!-- Single item -->
-<div class="carousel-item active" style="display: flex; justify-content: center;">
-  <video class="img-fluid" autoplay loop muted style="width: 100%; max-width: 1600px; height: 600px; object-fit: contain;">
-    <source src="images/wanderease1 (1) (1).mp4" type="video/mp4" />
-  </video>
-  <div class="carousel-caption d-none d-md-block">
-    
+  <!-- Indicators -->
+   <!--
+  <div class="carousel-indicators">
+    <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="2" aria-label="Slide 3"></button>
   </div>
-</div>
-  <!-- Single item -->
-<div class="carousel-item">
-  <video class="img-fluid" autoplay loop muted style="height: 600px;width:1950px; object-fit: cover;">
-    <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
-  </video>
-  <div class="carousel-caption ">
-    <h5>Wanderease: Your Gateway to Adventure</h5>
-    <p>
-      "Embark on an unforgettable journey with Wanderease! Explore stunning destinations that ignite your wanderlust and create memories that last a lifetime. Whether you seek relaxation or adventure, we've got the perfect escape tailored just for you."
-    </p>
-  </div>
-</div>
-
-
-  
-
-  <!-- Single item -->
-  <div class="carousel-item">
-    <video class="img-fluid" autoplay loop muted style="height: 600px;width:1950px; object-fit: cover;">
-      <source
-        src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4"
-        type="video/mp4"
-      />
-    </video>
-    <div class="carousel-caption">
-      <h5>Discover the World with Wanderease</h5>
-      <p>
-        "From breathtaking mountains to pristine beaches, Wanderease brings you closer to nature's wonders. Let our expert guides lead you through exhilarating experiences and hidden gems, making your travel dreams a reality!"
-      </p>
+-->
+  <!-- Inner -->
+  <div class="carousel-inner">
+    <!-- First item -->
+    <div class="carousel-item active" style="display: flex; justify-content: center;">
+      <video class="img-fluid" autoplay loop muted id="video1" style="width: 100%; max-width: 1600px; height: 600px; object-fit: contain;">
+        <source src="images/wanderease1 (1) (1).mp4" type="video/mp4" />
+      </video>
+    </div>
+    <!-- Second item -->
+    <div class="carousel-item">
+      <video class="img-fluid" autoplay muted id="video2" style="height: 600px; width: 1950px; object-fit: cover;">
+        <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
+      </video>
+      <div class="carousel-caption">
+        <h5>Wanderease: Your Gateway to Adventure</h5>
+        <p>"Embark on an unforgettable journey with Wanderease!"</p>
+      </div>
+    </div>
+    <!-- Third item -->
+    <div class="carousel-item">
+      <video class="img-fluid" autoplay muted id="video3" style="height: 600px; width: 1950px; object-fit: cover;">
+        <source src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4" type="video/mp4" />
+      </video>
+      <div class="carousel-caption">
+        <h5>Discover the World with Wanderease</h5>
+        <p>"From breathtaking mountains to pristine beaches!"</p>
+      </div>
     </div>
   </div>
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
-<!-- Inner -->
 
-<!-- Controls -->
-<button data-mdb-button-init
-  class="carousel-control-prev"
-  type="button"
-  data-mdb-target="#carouselVideoExample"
-  data-mdb-slide="prev"
->
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Previous</span>
-</button>
-<button data-mdb-button-init
-  class="carousel-control-next"
-  type="button"
-  data-mdb-target="#carouselVideoExample"
-  data-mdb-slide="next"
->
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Next</span>
-</button>
-</div>
-<!-- Carousel wrapper -->
      
         <div id="popup" class="popup">
           <div id="popupContent" class="popup-content">
