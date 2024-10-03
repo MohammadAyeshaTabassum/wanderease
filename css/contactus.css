@@ -157,3 +157,31 @@
   .desktop-popup p {
     margin-top: 0px;
   }
+  #btn2 {
+    display: inline-block;
+    width: 150px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    padding: 10px 20px;
+    background-color: #fc5416;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; /* Center the text */
+    line-height: 30px; /* Vertically center the text */
+    transition: background-color 0.3s ease, transform 0.2s;
+    position: relative; /* Prevent expansion */
+}
+
+#btn2:hover {
+    background-color: #ff9900;
+}
+
+#btn2:active {
+    transform: scale(1); /* No scaling on click */
+}
+
+#btn2:focus {
+    outline: none;
+    box-shadow: none;
+}
