@@ -1,84 +1,103 @@
-.travel-container{
-           
-    margin-left: 8vmin;    
+.travel-container {
+    margin-left: 8vmin; /* Keep this for left margin */
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    
+    margin-left:-4px;
+    justify-content: center; /* Center all items in the container */
 }
-.travel-container .package1{
-    width: 300px;
+
+/* Adjust width to allow for centering */
+.travel-container .package1 {
+    width: 22%; /* Use percentage width to allow flexibility */
     height: 400px;
-    position: relative;
-    
-    margin-left: auto; /* Move the package cards to the right */
-    margin-right: 9vmin !important; /* Add some space between the right edge and the package cards */
+    margin: 0 1%; /* Add some side margin for spacing */
     margin-bottom: 10vmin;
+    margin-left: 20px;
     border-radius: 1vmin;
+    box-sizing: border-box; /* Ensure padding and borders don't increase element size */
+    position: relative; /* Ensure absolute elements inside can position relative to this */
 }
-.travel-container .package1 .image{
+
+.travel-container .package1 .image {
     height: 250px;
     width: 100%;
-    position: relative;
-    
-    border-top-left-radius: 1vmin;
-    border-top-right-radius: 1vmin ;
     border-radius: 1vmin;
     overflow: hidden;
 }
-.travel-container .package1 .image img{
+
+.travel-container .package1 .image img {
+    width: 100%; /* Ensure the image takes the full width */
     border-radius: 1vmin;
-    height: auto;
     transition: transform 0.5s ease;
 }
-.travel-container .package1 .image img:hover{
-   
+
+.travel-container .package1 .image img:hover {
     transform: scale(1.2);
 }
-.travel-container .package1 .one{
-    width: 100%;
-    height: 30px ;
-    position: relative;
-    
-    display: flex;
-    flex-wrap: wrap;
+
+/* Adjust layout for smaller screens */
+@media only screen and (max-width: 1200px) {
+    .travel-container .package1 {
+        width: 30%; /* Display 3 cards per row for medium screens */
+    }
 }
-.travel-container .package1 .one .days{
+
+@media only screen and (max-width: 900px) {
+    .travel-container .package1 {
+        width: 45%; /* Display 2 cards per row for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .travel-container .package1 {
+        width: 90%; /* Display 1 card per row for very small screens */
+    }
+}
+
+.travel-container .package1 .one {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* Ensure items are spaced out */
+    align-items: center; /* Center items vertically */
+}
+
+.travel-container .package1 .one .days {
     width: 50%;
     height: 100%;
     position: relative;
-  
 }
-.travel-container .package1 .one .days span{
-    
+
+.travel-container .package1 .one .days span {
     color: #6c757d;
 }
-.travel-container .package1 .one .rating{
+
+.travel-container .package1 .one .rating {
     width: 50%;
     height: 100%;
     position: relative;
-    
 }
-.travel-container .package1 .one .rating span{
-    margin-left: 120px;
+
+.travel-container .package1 .one .rating span {
+    margin-left: auto; /* Align rating to the right */
     color: #20d400;
     font-weight: 900;
-    
 }
-.travel-container .package1 button{
+
+.travel-container .package1 button {
     width: 100%;
-    
     height: 12%;
     border-radius: 1.5vmin;
     border: none;
-    background-color:  #db7202;
+    background-color: #db7202;
     color: white;
     font-weight: 700;
     margin-top: 10px;
 }
 
-.country-name
-{
+.country-name {
     position: absolute;
     width: 40%;
     height: 35px;
@@ -92,31 +111,37 @@
     border-bottom-right-radius: 30%;
     font-size: 90%;
 }
-h6{
+
+h6 {
     font-weight: 200;
-    font-style:normal;
+    font-style: normal;
 }
+
 .rating {
     display: inline-block;
-    padding: 5px; /* adjust padding to keep the star within the package card */
-  }
-  
-  .rating span {
+    padding: 2px; /* Adjust padding to keep the star within the package card */
+    margin-right:-110px;
+}
+
+.rating span {
     display: inline-block;
-  }
-  .rating .fas.fa-star {
+}
+
+.rating .fas.fa-star {
     color: #ffd700;
-  }
-  p{
+}
+
+p {
     font-size: smaller;
-  }
-  /* Mobile media query */
+}
+
+/* Mobile media query */
 @media only screen and (max-width: 768px) {
     .travel-container {
-      justify-content: center; /* Center the packages horizontally */
+        justify-content: center; /* Center the packages horizontally */
     }
     .travel-container .package1 {
-      margin-left: 0; /* Remove the left margin */
-      margin-right: auto; /* Add right margin to center the package */
+        margin-left: 0; /* Remove the left margin */
+        margin-right: auto; /* Add right margin to center the package */
     }
-  }
+}

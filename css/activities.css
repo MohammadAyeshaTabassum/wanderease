@@ -26,7 +26,7 @@ body{
     font-weight: 600;
     /* margin: 30px; */
     /* margin-bottom: 0px; */
-    background-color: antiquewhite;
+    background: linear-gradient(to right, #FFCC80, #FF9800); /* Light Orange to Vivid Orange */
     width: 85%;
     padding: 10px;
     border-radius: 1vmin;

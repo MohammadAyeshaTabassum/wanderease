@@ -32,81 +32,80 @@
 <body>
   <!-- <div id="overlay" class="overlay"></div> -->
  
-    
-    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img style="transform: scale(1.2);margin-left:15px" src="wanderease.png" alt="Logo" width="60" class="d-inline-block align-text-top">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo03">
-                <div></div>
-                <!-- <div class="input-group" style="width: 300px;" >
-                    <input class="form-control search-input me-2"  type="search" aria-label="Search">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <button class="btn btn-outline-success search-button" id="search-button" type="submit" >Search</button>
-                </div> -->
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item me-5">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item me-5">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item me-5">
-                        <a class="nav-link" href="#packages">Packages</a>
-                    </li>
-                    <li class="nav-item me-5">
-                        <a class="nav-link" href="#activities">Activities</a>
-                    </li>
-                    <li class="nav-item me-5">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item me-5">
-                        <a class="nav-link" href="#testimonials">Testimonials</a>
-                    </li>
-                </ul>
-            </div>
+  <nav class="navbar sticky-top navbar-expand-lg" style="background: linear-gradient(to right, #ffe0b2, #ffcc80, #ffab40, #ff8f00, #ff6f00);">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img style="transform: scale(1.2);margin-left:15px" src="wanderease.png" alt="Logo" width="60" class="d-inline-block align-text-top">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo03">
+            <div></div>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item me-5">
+                    <a class="nav-link active" aria-current="page" href="#" style="color: white;">Home</a>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" href="#about" style="color: white;">About</a>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" href="#packages" style="color: white;">Packages</a>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" href="#activities" style="color: white;">Activities</a>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" href="#contact" style="color: white;">Contact</a>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" href="#testimonials" style="color: white;">Testimonials</a>
+                </li>
+            </ul>
         </div>
-    </nav>
-    <div  id="home" >
-<!-- Carousel wrapper -->
-<div id="carouselVideoExample" class="carousel slide carousel-fade">
-  <!-- Indicators -->
-  <!--
-  <div class="carousel-indicators">
-    <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  -->
-
-  <!-- Inner -->
-  <div class="carousel-inner">
-    <!-- First item -->
-    <div class="carousel-item active" style="display: flex; justify-content: center;">
-      <video class="img-fluid" autoplay loop muted id="video1" style="width: 100%; max-width: 2000px; height: 600px; object-fit: contain;">
-        <source src="https://res.cloudinary.com/djcljqyvl/video/upload/v1727866611/wanderease1_1_1_v9p8mt.mp4" type="video/mp4">
-      </video>
     </div>
-  </div>
-  <!-- Controls removed -->
-</div>
+</nav>
 
-     
-        <div id="popup" class="popup">
-          <div id="popupContent" class="popup-content">
-              <!-- Close button -->
-              <span class="close-btn">&times;</span>
-              <!-- Popup image -->
-              <img src="images/posternew.jpg" alt="Popup Image" class="popup-image" id="popupImage">
+<div id="home">
+  <!-- Carousel wrapper -->
+  <div id="carouselVideoExample" class="carousel slide carousel-fade">
+    
+    <!-- Inner -->
+    <div class="carousel-inner">
+      <!-- First item -->
+      <div class="carousel-item active" style="display: flex; justify-content: center; align-items: center;">
+        <!-- Container for video and ad -->
+        <div style="display: flex; align-items: center; justify-content: center; max-width: 100%;">
+          <!-- Video -->
+          <video class="img-fluid" autoplay loop muted id="video1" style="max-width: 1200px; height: 650px; object-fit: contain;">
+            <source src="https://res.cloudinary.com/djcljqyvl/video/upload/v1727866611/wanderease1_1_1_v9p8mt.mp4" type="video/mp4">
+          </video>
+          <!-- Ad Image -->
+          <div style="margin-left: 0px; width: 200px;">
+            <a href="#packages">
+            <img src="images/Teal and White Modern Travel Promotion Wide Skyscraper Ad.svg" alt="Ad Image" style="width: 300px; height: auto; max-height: 600px; object-fit: contain;">
+            </a>
           </div>
         </div>
-      
+      </div>
+    </div>
+    <!-- Controls removed -->
+  </div>
+</div>
+
+
+     
+       <!-- <div id="popup" class="popup">-->
+         <!-- <div id="popupContent" class="popup-content">-->
+              <!-- Close button -->
+             <!-- <span class="close-btn">&times;</span>-->
+              <!-- Popup image -->
+             <!-- <img src="images/posternew.jpg" alt="Popup Image" class="popup-image" id="popupImage">-->
+         <!-- </div>-->
+       <!-- </div>-->
+  
       
     </div>
     
@@ -452,7 +451,11 @@
         
     </div>
 
-    
+    <div>
+      <a href="BaliPackage.html">
+        <img src="images/WANDEREASE (1).svg" style="width: 90%; height: 20%; max-width: 100%; object-fit: cover; display: block; margin: 0 auto; border-radius: 15px;">
+    </a>
+        </div>
 
     <div style="background-color: #f5f5f5; padding:50px" id="activities" class="activities-container mt-5">
         <!-- <h2 class="text-center" style="color: #db7202;">.</h2> -->
@@ -611,8 +614,20 @@
           </button>
         </div>
 
-        <a style="text-decoration: none;" href="activities.html"><div class="view-more-activities">Explore Activities</div></a>
-    
+        <a href="activities.html" style="text-decoration: none;">
+          <div class="view-more-activities" style="
+              display: inline-block; 
+              padding: 15px 25px; 
+              border-radius: 25px; 
+              font-size: 1.2em; 
+              font-weight: bold; 
+              color: white; 
+              background: linear-gradient(135deg, #ffcc80,#db7202); 
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+              transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+          ">Explore Activities</div>
+      </a>
+          
       </div>
 
       <div class="video-carousel">

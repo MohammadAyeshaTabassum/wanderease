@@ -1,4 +1,4 @@
-.about-container{
+.about-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -6,17 +6,23 @@
     align-items: center;
     justify-content: center;
 }
-.box{
+
+.box {
     width: 300px;
     margin: 20px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    font-size:medium;
-    background-color:  #ffe8ca;
+    font-size: medium;
+    background: linear-gradient(135deg, #ffd9a0, #ff9900); /* Gradient from light to dark orange */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Add a smooth hover effect */
 }
 
-.box h4{
+.box:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.box h4 {
     font-weight: 500;
 }

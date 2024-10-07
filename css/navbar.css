@@ -3,6 +3,10 @@ body{
     font-family: "Crimson Text", serif;
     
 }
+.nav-link:hover {
+    color: #ffab40; /* Lighter shade for hover effect */
+    text-decoration: underline;
+}
 
 .navbar-nav .nav-link {
     color: #db7202;

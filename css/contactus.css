@@ -171,6 +171,7 @@
     line-height: 30px; /* Vertically center the text */
     transition: background-color 0.3s ease, transform 0.2s;
     position: relative; /* Prevent expansion */
+    margin-top: 10px;
 }
 
 #btn2:hover {
