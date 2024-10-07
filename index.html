@@ -27,7 +27,33 @@
     <link rel="stylesheet" href="css/popup.css">
     <style>.desktop-popup p {
       margin-bottom: 0px;
-    }</style>
+    }
+    @media only screen and (max-width: 768px) {
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+  
+.carousel-img {
+    width: 90vw;
+    height: auto;
+    margin-left: 60px; /* Keep margin for larger screens */
+    border-radius: 20px;
+}
+
+/* Mobile media query */
+@media only screen and (max-width: 768px) {
+    .carousel-img {
+        margin-left: 0; /* Move the image to the left */
+        width: 100%; /* Make the image take the full width of the viewport */
+        border-radius: 10px;
+    }
+    
+    #myCarousel {
+        margin: 0; /* Remove any margin from the carousel */
+    }
+}
+  </style>
 </head>
 <body>
   <!-- <div id="overlay" class="overlay"></div> -->
@@ -83,9 +109,9 @@
             <source src="https://res.cloudinary.com/djcljqyvl/video/upload/v1727866611/wanderease1_1_1_v9p8mt.mp4" type="video/mp4">
           </video>
           <!-- Ad Image -->
-          <div style="margin-left: 0px; width: 200px;">
+          <div class="hide-on-mobile" style="margin-left: 0px; width: 200px;">
             <a href="#packages">
-            <img src="images/Teal and White Modern Travel Promotion Wide Skyscraper Ad.svg" alt="Ad Image" style="width: 300px; height: auto; max-height: 600px; object-fit: contain;">
+              <img src="images/Teal and White Modern Travel Promotion Wide Skyscraper Ad.svg" alt="Ad Image" style="width: 300px; height: auto; max-height: 600px; object-fit: contain;">
             </a>
           </div>
         </div>
@@ -453,32 +479,31 @@
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" style="width: 100vw; margin: 0 auto;">
       <!-- Indicators -->
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
       </div>
-    
+  
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="images/White Blue Green Modern Travel Agent Billboard Web Ad (1).svg" alt="Los Angeles" style="width: 90vw; height: auto;margin-left: 60px; border-radius: 20px;">
-        </div>
-    
-        <div class="carousel-item">
-          <img src="images/WANDEREASE (1).svg" alt="Chicago" style="width: 90vw; height: auto; margin-left: 60px;border-radius: 20px;">
-        </div>
+          <div class="carousel-item active">
+              <img src="images/White Blue Green Modern Travel Agent Billboard Web Ad (1).svg" alt="Los Angeles" class="carousel-img">
+          </div>
+  
+          <div class="carousel-item">
+              <img src="images/WANDEREASE (1).svg" alt="Chicago" class="carousel-img">
+          </div>
       </div>
-    
+  
       <!-- Left and right controls -->
       <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
       </button>
-    </div>
-    
+  </div>
     
     <!-- Include Bootstrap JavaScript file -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>

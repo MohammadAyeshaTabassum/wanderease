@@ -149,3 +149,57 @@ body{
 .carousel-control-next-icon::before{
     font-size: 20px;
 }
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Decrease font size for better readability on smaller screens */
+        padding: 10px 5px;
+    }
+
+    .search-input {
+        width: 150px; /* Adjust search bar width for mobile screens */
+        padding-left: 2rem;
+    }
+
+    .search-button {
+        padding: 8px 12px; /* Adjust button padding */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        height: 30px; /* Reduce icon size */
+        width: 30px;
+        transform: translateY(20px); /* Adjust vertical translation for better alignment */
+    }
+
+    .tabs-center {
+        flex-direction: column;
+        align-items: flex-start; /* Align tabs to the start for better mobile navigation */
+        padding-left: 10px; /* Add padding for a cleaner look */
+    }
+
+    .nav-pills .nav-item {
+        margin: 0 10px; /* Reduce margin between pills */
+    }
+
+    .tab-content {
+        margin-top: 20px; /* Reduce the top margin for mobile */
+    }
+
+    .nav-pills {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        height: 35px;
+        width: 35px;
+        transform: translateY(20px);
+    }
+}
