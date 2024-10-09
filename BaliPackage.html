@@ -567,23 +567,53 @@
 /* Mobile media query (max-width: 768px) */
 @media only screen and (max-width: 768px) {
   #stay-content {
-    width: 90%; /* Full width on mobile */
-    left: 20px; /* No left offset on mobile */
-    margin-top: -5px !important; /* Reduce top margin on mobile */
+    width: 110% !important; /* Full width on mobile */
+    left: -14px !important; /* No left offset on mobile */
+    margin-top: 20px !important; /* Reduce top margin on mobile */
   }
+  
   #stay-content .carousel-inner {
     flex-wrap: wrap; /* Allow carousel items to wrap on mobile */
   }
+
   #stay-content .carousel-item img {
-    left: 0; /* No left offset on mobile */
-    width: 100%; /* Full width on mobile */
+    width: 100% !important; /* Full width on mobile */
     height: 270px; /* Set a fixed height for mobile */
+    object-fit: cover; /* Maintain image aspect ratio */
+    left:60px !important;
   }
+
   /* Adjustments if you're using Bootstrap carousel */
   #stay-content .carousel {
     margin-left: 0; /* No left margin on mobile */
   }
-}
+
+  /* Next and previous button styling */
+  #stay-content .carousel-prev,
+  #stay-content .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px; /* Button width */
+    height: 20px; /* Button height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 50%; /* Circular button */
+    color: white;
+    text-align: center;
+    line-height: 30px; /* Center the icon vertically */
+    font-size: 20px; /* Adjust icon size */
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  #stay-content .carousel-prev {
+    left: 60px; /* Position prev button on the left */
+  }
+
+  #stay-content .carousel-next {
+    right: 0px; /* Position next button on the right */
+  }
+
 
   
 .mobile-form-container {
@@ -838,25 +868,29 @@
 @media only screen and (max-width: 480px) {
   .dropdown-container {
     margin: 15px;
-    width: 90%;
-    margin-left: 20px;
+    width: 100% !important; /* Increase width to 95% */
+    margin-left: 0px; /* Reduce left margin for better alignment */
   }
+
   .dropdown-content {
-    width: 100%;
-    padding: 10px;
+    width: 100%; /* Full width */
+    padding: 15px; /* Slightly increase padding for better spacing */
     border: 1px solid #db7202;
     border-radius: 5px;
   }
+
   .dropdown-content ul {
     list-style-type: none;
     padding: 0;
   }
+
   .dropdown-content ul li {
-    margin: 5px 0;
-    padding: 8px;
+    margin: 8px 0; /* Increase the margin for more spacing */
+    padding: 10px; /* Increase padding for better touch interaction */
     border-bottom: 1px solid #e2e2e2;
   }
 }
+
 @media only screen and (max-width: 480px) {
   .end-trip {
     text-align: center;
@@ -1150,21 +1184,21 @@
 /* Mobile media query */
 @media only screen and (max-width: 768px) {
   .carousel2-prev {
-    left: -17px;
+    left: -7px;
     font-size: 18px;
   }
 
   .carousel2-next {
-    right: 23px;
+    right:-10px !important;
     font-size: 18px;
   }
 
   .carousel2-item img {
-    width: 100%;
+    width: 110%;
     height: 100%;
     object-fit: cover;
-    margin-left: -20px;
-    margin-top:-10px;
+    margin-left: -14px;
+    margin-top:20px;
   }
 }
 .description-card {
@@ -1221,9 +1255,10 @@
   
   
   #activities-content {
-    width: 80%; /* Use full width for smaller screens */
+    width: 95% !important; /* Use full width for smaller screens */
     padding: 15px; /* Reduce padding */
     margin-top: -5px; /* Remove extra margin */
+    margin-left: -20px;
   }
 
   .carousel3-item {
@@ -1231,7 +1266,7 @@
   }
 
   .carousel3-item img {
-    height: 180px; /* Reduce image height for smaller screens */
+    height: 100px; /* Reduce image height for smaller screens */
   }
 
   .carousel3-item h4 {
@@ -1239,8 +1274,8 @@
   }
 
   .carousel3-prev, .carousel3-next {
-    font-size: 20px; /* Reduce button size */
-    padding: 8px; /* Reduce padding for buttons */
+    font-size: 10px; /* Reduce button size */
+    padding: 10px; /* Reduce padding for buttons */
   }
 
   .carousel3-prev {
@@ -1400,7 +1435,7 @@
 #stay-content .carousel {
   margin-left: -30px; /* Move the entire carousel left */
 }
-
+}
   </style>
   <!-- Include flatpickr CSS and JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">

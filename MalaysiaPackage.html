@@ -591,9 +591,11 @@
   border-radius: 50%;
 }
 .carousel3-prev {
+  display: none;
   left: 20px;
 }
 .carousel3-next {
+  display: none;
   right: 20px;
 }
 
@@ -886,7 +888,7 @@
 @media only screen and (max-width: 480px) {
   .dropdown-container {
     margin: 15px;
-    width: 90%;
+    width: 90% !important;
     margin-left: 20px;
   }
   .dropdown-content {
@@ -1191,20 +1193,20 @@
 /* Mobile media query */
 @media only screen and (max-width: 768px) {
   .carousel2-prev {
-    left: -17px;
+    left: 10px;
     font-size: 18px;
   }
 
   .carousel2-next {
-    right: 23px;
+    right: 10px;
     font-size: 18px;
   }
 
   .carousel2-item img {
-    width: 100%;
+    width: 95%;
     height: 100%;
     object-fit: cover;
-    margin-left: -20px;
+    margin-left: 10px;
     margin-top:-10px;
   }
 }

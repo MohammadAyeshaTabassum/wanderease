@@ -686,9 +686,9 @@
 /* Mobile media query (max-width: 768px) */
 @media only screen and (max-width: 768px) {
   #stay-content {
-    width: 90%; /* Full width on mobile */
-    left: 20px; /* No left offset on mobile */
-    margin-top: -5px !important; /* Reduce top margin on mobile */
+    width: 100% !important; /* Full width on mobile */
+    left: -10px; /* No left offset on mobile */
+    margin-top: 20px !important; /* Reduce top margin on mobile */
   }
   #stay-content .carousel-inner {
     flex-wrap: wrap; /* Allow carousel items to wrap on mobile */
@@ -947,8 +947,8 @@
 @media only screen and (max-width: 480px) {
   .dropdown-container {
     margin: 15px;
-    width: 90%;
-    margin-left: 20px;
+    width: 100% !important;
+    margin-left: 0px;
   }
   .dropdown-content {
     width: 100%;
@@ -1246,21 +1246,21 @@
 /* Mobile media query */
 @media only screen and (max-width: 768px) {
   .carousel2-prev {
-    left: -17px;
+    left: -14px;
     font-size: 18px;
   }
 
   .carousel2-next {
-    right: 23px;
+    right: -17px;
     font-size: 18px;
   }
 
   .carousel2-item img {
-    width: 100%;
+    width: 110%;
     height: 100%;
     object-fit: cover;
-    margin-left: -20px;
-    margin-top:-10px;
+    margin-left: -14px;
+    margin-top:20px;
   }
 }
 
@@ -1316,9 +1316,10 @@
   
    
   #activities-content {
-    width: 80%; /* Use full width for smaller screens */
+    width: 100% !important; /* Use full width for smaller screens */
     padding: 15px; /* Reduce padding */
-    margin-top: -5px; /* Remove extra margin */
+    margin-top: 20px; /* Remove extra margin */
+    margin-left: 5px;
   }
   .carousel3-item {
     padding: 10px; /* Reduce padding inside carousel items */

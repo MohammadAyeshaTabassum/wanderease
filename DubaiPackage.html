@@ -841,7 +841,7 @@
 @media only screen and (max-width: 480px) {
   .dropdown-container {
     margin: 15px;
-    width: 90%;
+    width: 90% !important;
     margin-left: 20px;
   }
   .dropdown-content {
@@ -1210,20 +1210,20 @@
 /* Mobile media query */
 @media only screen and (max-width: 768px) {
   .carousel2-prev {
-    left: -17px;
+    left: 10px;
     font-size: 18px;
   }
 
   .carousel2-next {
-    right: 23px;
+    right: 10px;
     font-size: 18px;
   }
 
   .carousel2-item img {
-    width: 100%;
+    width: 95%;
     height: 100%;
     object-fit: cover;
-    margin-left: -20px;
+    margin-left: 10px;
     margin-top:-10px;
   }
 }
@@ -1281,7 +1281,7 @@
   
   
   #activities-content {
-    width: 80%; /* Use full width for smaller screens */
+    width: 75% !important; /* Use full width for smaller screens */
     padding: 15px; /* Reduce padding */
     margin-top: -5px; /* Remove extra margin */
   }
@@ -1290,13 +1290,14 @@
   }
   .carousel3-item img {
     height: 180px; /* Reduce image height for smaller screens */
+    width: 280px!important; 
   }
   .carousel3-item h4 {
     font-size: 16px; /* Reduce heading font size */
   }
   .carousel3-prev, .carousel3-next {
     font-size: 20px; /* Reduce button size */
-    padding: 8px; /* Reduce padding for buttons */
+    padding: 10px; /* Reduce padding for buttons */
   }
   .carousel3-prev {
     left: 10px; /* Adjust for smaller screen */
@@ -1936,6 +1937,11 @@ window.addEventListener('scroll', () => {
     <div class="carousel3">
       <div class="carousel3-inner">
         <div class="carousel3-item active">
+          <img src="dub/global village dubai 2.svg" alt="Garuda Wisnu Kencana and Departure">
+          <h4>Global Village: A Cultural Extravaganza</h4>
+          <h6>isit Global Village, a vibrant multicultural festival park featuring pavilions from around the world. Enjoy diverse entertainment, shop for unique crafts, and savor delicious international cuisine, all in one lively atmosphere that celebrates global culture.</h6>
+        </div>
+        <div class="carousel3-item">
           <img src="dub/dhow marina cruise.svg" alt="Uluwatu Temple">
           <h4>Dubai Marina: Dhow Cruise Experience</h4>
           <h6>Embark on a Dhow Marina Cruise for a relaxing evening on the water. Savor a delicious buffet dinner while taking in the stunning skyline views of Dubai, creating unforgettable memories against the backdrop of glittering lights.</h6>
@@ -1960,11 +1966,7 @@ window.addEventListener('scroll', () => {
           <h4>Dubai Miracle Garden: A Floral Wonderland</h4>
           <h6>Explore the Dubai Miracle Garden, a breathtaking seasonal attraction showcasing vibrant floral displays and intricate designs. Stroll through pathways adorned with millions of flowers, creating a stunning visual spectacle that delights visitors of all ages.</h6>
         </div>
-        <div class="carousel3-item">
-          <img src="dub/global village dubai 2.svg" alt="Garuda Wisnu Kencana and Departure">
-          <h4>Global Village: A Cultural Extravaganza</h4>
-          <h6>isit Global Village, a vibrant multicultural festival park featuring pavilions from around the world. Enjoy diverse entertainment, shop for unique crafts, and savor delicious international cuisine, all in one lively atmosphere that celebrates global culture.</h6>
-        </div>
+        
       </div>
       <a class="carousel3-prev" onclick="carousel3PrevClick()">«</a>
       <a class="carousel3-next" onclick="carousel3NextClick()">»</a>
