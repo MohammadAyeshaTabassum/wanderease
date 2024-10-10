@@ -3,30 +3,40 @@
 html, body {
     font-family: "Crimson Text", serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-* {
-    box-sizing: border-box; /* Ensure all elements respect the box model */
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Apply box-sizing to all elements, including pseudo-elements */
 }
 
 body, .container, .row {
-    max-width: 100vw; /* Ensure no element exceeds viewport width */
+    width: 100vw; /* Ensure no element exceeds viewport width */
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
+/* Remove max-width: 100% from * selector */
+/* Instead, apply it to specific elements that need it */
+.container, .row, .carousel-inner, .carousel-item {
+    max-width: 100%;
+}
+
+/* Navbar link hover effect */
 .nav-link:hover {
     color: #ffab40; /* Lighter shade for hover effect */
     text-decoration: underline;
 }
 
+/* Navbar active and hover state */
 .navbar-nav .nav-link {
     color: #db7202;
     transition: color 0.3s, text-decoration 0.3s;
+    position: relative;
 }
 
 .navbar-nav .nav-link.active {
@@ -41,10 +51,7 @@ body, .container, .row {
     text-underline-offset: 4px;
 }
 
-.navbar-nav .nav-link {
-    position: relative;
-}
-
+/* Add underline effect on hover */
 .navbar-nav .nav-link::after {
     content: "";
     position: absolute;
@@ -63,11 +70,13 @@ body, .container, .row {
     transform-origin: bottom left;
 }
 
+/* Search bar */
 .search-input {
     border-radius: 25px;
     padding-left: 2.5rem;
     background: #fff;
     width: 180px;
+    box-sizing: border-box;
 }
 
 .search-icon {
@@ -97,46 +106,23 @@ body, .container, .row {
     border-color: #db7202;
 }
 
-.input-group {
-    position: relative;
-    width: 100%;
-}
-
-.tabs-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* Pills-style navigation */
 .nav-pills .nav-item {
-    margin: 0 20px; 
-}
-
-.tab-content {
-    margin-top: 30px;
+    margin: 0 20px;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-    background-color: #db7202 !important; 
-    color: white !important; 
+    background-color: #db7202 !important;
+    color: white !important;
 }
 
 .nav-pills .nav-link:hover {
     color: #fff;
-    background-color: #db7202; 
+    background-color: #db7202;
 }
 
-.nav-pills .nav-link {
-    color: rgb(1, 29, 52);
-}
-
-.nav-pills {
-    margin-top: 20px;  
-    margin-bottom: 20px;  
-}
-
-/* Carousel Controls */
+/* Carousel controls */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     height: 40px;
@@ -147,14 +133,6 @@ body, .container, .row {
     transition: 0.2s;
 }
 
-.carousel-control-prev-icon::after,
-.carousel-control-next-icon::after,
-.carousel-control-prev-icon::before,
-.carousel-control-next-icon::before {
-    font-size: 20px;
-}
-
-/* Mobile View Adjustments */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -183,6 +161,7 @@ body, .container, .row {
         transform: translateY(20px);
     }
 
+    /* Tabs alignment */
     .tabs-center {
         flex-direction: column;
         align-items: flex-start;
@@ -192,33 +171,5 @@ body, .container, .row {
 
     .nav-pills .nav-item {
         margin: 0 10px;
-    }
-
-    .tab-content {
-        margin-top: 20px;
-    }
-
-    .nav-pills {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        height: 35px;
-        width: 35px;
-        transform: translateY(20px);
-    }
-
-    /* Make sure elements are not overflowing */
-    .container, .row, .carousel-inner, .carousel-item {
-        max-width: 100%;
-        width: 100%;
-        overflow-x: hidden; /* Ensure no element causes horizontal scrolling */
-    }
-
-    /* Ensure no fixed-width items cause overflow */
-    * {
-        max-width: 100%;
     }
 }
