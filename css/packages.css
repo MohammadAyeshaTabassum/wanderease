@@ -54,7 +54,19 @@
         width: 90%; /* Display 1 card per row for very small screens */
     }
 }
-
+/* Add this media query for mobile screens only */
+@media only screen and (max-width: 480px) {
+    .travel-container {
+        flex-direction: column; /* Stack elements vertically on mobile screens */
+        align-items: center; /* Center elements horizontally */
+    }
+    .travel-container .package1 {
+        width: 90%; /* Take up most of the available width on mobile screens */
+        margin-left: auto; /* Center the package horizontally */
+        margin-right: auto; /* Center the package horizontally */
+        margin-bottom: 10vmin; /* Maintain bottom margin */
+    }
+}
 .travel-container .package1 .one {
     width: 100%;
     height: 30px;
