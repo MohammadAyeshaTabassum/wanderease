@@ -122,3 +122,85 @@
     transform: translate(50%, -50%);
   }
 }
+/* Add this media query for mobile screens only */
+@media only screen and (max-width: 480px) {
+  .testimonial-container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fdf1e3;
+  }
+  .testimonial {
+      position: relative;
+      max-width: 100%; /* Take up full width on mobile screens */
+      width: 100%;
+      padding: 20px; /* Adjust padding for mobile screens */
+      overflow: hidden;
+  }
+  .testimonial .image {
+      height: 120px;
+      width: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+  }
+  .testimonial .slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 20px;
+      height: 100%;
+      width: 100%;
+  }
+  .slide p {
+      text-align: center;
+      padding: 0 20px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #333;
+  }
+  .slide .quote-icon {
+      font-size: 20px;
+      color: #db7202;
+  }
+  .slide .details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .details .name {
+      font-size: 12px;
+      font-weight: 600;
+      color: #333;
+  }
+  .details .job {
+      font-size: 10px;
+      font-weight: 400;
+      color: #333;
+  }
+  /* swiper button css */
+  .nav-btn {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      transform: translateY(20px);
+      background-color: rgba(0, 0, 0, 0.1);
+      transition: 0.2s;
+  }
+  .nav-btn:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+  }
+  .nav-btn::after,
+  .nav-btn::before {
+      font-size: 15px;
+      color: #fff;
+  }
+  .swiper-pagination-bullet {
+      background-color: rgba(0, 0, 0, 0.8);
+  }
+  .swiper-pagination-bullet-active {
+      background-color: #f89e3e;
+  }
+}
