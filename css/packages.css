@@ -1,21 +1,39 @@
 .travel-container {
+    margin-left: 8vmin; /* Keep this for left margin */
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column; /* Add this to stack packages vertically */
+    margin-left:-4px;
     justify-content: center; /* Center all items in the container */
-    align-items: center; /* Center items vertically */
-    gap: 20px; /* Add a gap between cards */
 }
 
+/* Adjust width to allow for centering */
 .travel-container .package1 {
     width: 22%; /* Use percentage width to allow flexibility */
     height: 400px;
-    margin: 0 auto; /* Center the package horizontally */
+    margin: 0 1%; /* Add some side margin for spacing */
+    margin-bottom: 10vmin;
+    margin-left: 20px;
     border-radius: 1vmin;
     box-sizing: border-box; /* Ensure padding and borders don't increase element size */
     position: relative; /* Ensure absolute elements inside can position relative to this */
-    max-width: 300px; /* Add this to set a maximum width */
+}
+
+.travel-container .package1 .image {
+    height: 250px;
+    width: 100%;
+    border-radius: 1vmin;
+    overflow: hidden;
+}
+
+.travel-container .package1 .image img {
+    width: 100%; /* Ensure the image takes the full width */
+    border-radius: 1vmin;
+    transition: transform 0.5s ease;
+}
+
+.travel-container .package1 .image img:hover {
+    transform: scale(1.2);
 }
 
 /* Adjust layout for smaller screens */
@@ -34,20 +52,6 @@
 @media only screen and (max-width: 600px) {
     .travel-container .package1 {
         width: 90%; /* Display 1 card per row for very small screens */
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .travel-container .package1 {
-        width: 100%; /* Ensure the package takes up the full width on very small screens */
-        margin: 0 auto; /* Center the package horizontally */
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .travel-container .package1 {
-        width: 100%; /* Ensure the package takes up the full width on very small screens */
-        margin: 0 auto; /* Center the package horizontally */
     }
 }
 
@@ -134,11 +138,11 @@ p {
 @media only screen and (max-width: 768px) {
     .travel-container {
         justify-content: center; /* Keep packages centered */
-        align-items: center; /* Center items vertically */
-        gap: 20px; /* Add a gap between cards */
     }
     .travel-container .package1 {
         width: 90%; /* Ensure the package takes up most of the width */
-        margin: 0 auto; /* Automatically center the package */
+        margin-left: auto; /* Automatically center the package */
+        margin-right: auto; /* Automatically center the package */
+        margin-bottom: 10vmin; /* Maintain bottom margin */
     }
 }
